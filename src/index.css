@@ -55,6 +55,10 @@ html, body {
     color: #0073b1;
 }
 
+.app > .social > .telegram {
+    color: #28a7e5;
+}
+
 .app > .my-projects {
     text-align: center;
 }

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 
 import './index.css'
 
+import ChkSndLogo from './assets/images/chksnd-logo.png'
+
 const App = () => {
   return (
     <div className='app'>
@@ -25,6 +27,9 @@ const App = () => {
         <a className='linkedin' href='https://www.linkedin.com/in/aimazh/'>
           <i className='fab fa-linkedin fa-2x' />
         </a>
+        <a className='telegram' href='https://t.me/brakatamusic'>
+          <i className='fab fa-telegram fa-2x' />
+        </a>
       </div>
 
       <div className='divider' />
@@ -34,10 +39,10 @@ const App = () => {
 
         <div className='projects'>
           <div className='project'>
-            <img className='logo' src='https://aimazh.github.io/chksndapp/static/media/app-logo.6d49b9eb.png' />
+            <img className='logo' src={ChkSndLogo} />
             <h2 className='name'>ChkSnd</h2>
             <p className='description'>ChkSnd is a tool to create music<br />videos with visual accompaniment.<br /><br />Available for iOS and Android.</p>
-            <a className='website' href='https://aimazh.github.io/chksndapp/'>Website</a>
+            <a className='website' href='https://chksnd.github.io/'>Website</a>
           </div>
         </div>
       </div>
@@ -65,8 +70,8 @@ const App = () => {
       <div className='divider' />
 
       <div className='footer'>
-        <div>Developed by @aimazh</div>
-        <div>&copy; 2020</div>
+        <div>Developed with &heart;</div>
+        <div>&copy; 2020 Aibek Mazhitov</div>
       </div>
     </div>
   )
