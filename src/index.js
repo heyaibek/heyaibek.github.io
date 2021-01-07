@@ -10,43 +10,47 @@ const App = () => {
   return (
     <div className='app'>
       <div className='header'>
-        <h1>Aibek Mazhitov</h1>
-        <ul>
-          <li>Software engineer @ <a href='https://www.flatex.com/'>flatexAG</a></li>
-          <li>Founder @ <a href='https://aimazh.github.io/chksndapp/'>ChkSnd</a></li>
-          <li>Music producer @ <a href='https://soundcloud.com/brakata/tracks'>Soundcloud</a></li>
-        </ul>
+        <h1 className='rainbow'>Aibek Mazhitov</h1>
+        <div className='bio'>
+          <p>Hi there <span role='img' aria-label='hands-up'>👋</span>!</p>
+          <p>I'm a Software Engineer at <a href='https://www.flatex.com/'>flatexAG</a>.</p>
+          <p>I also founded <a href='https://aimazh.github.io/chksndapp/'>ChkSnd</a>.</p>
+          <p>In my free time I produce electronic <a href='https://soundcloud.com/brakata'>music</a>.</p>
+        </div>
       </div>
 
       <div className='social'>
-        <a className='github' href='https://github.com/aimazh'>
-          <i className='fab fa-github fa-2x' />
-        </a>
         <a className='linkedin' href='https://www.linkedin.com/in/aimazh/'>
           <i className='fab fa-linkedin fa-2x' />
         </a>
-        <a className='telegram' href='https://t.me/brakatamusic'>
-          <i className='fab fa-telegram fa-2x' />
+        <a className='github' href='https://github.com/aimazh'>
+          <i className='fab fa-github fa-2x' />
         </a>
         <a className='leetcode' href='https://leetcode.com/aimazh'>
           <i className='fab fa-codepen fa-2x' />
+        </a>
+        <a className='instagram' href='https://instagram.com/brakatamusic'>
+          <i className='fab fa-instagram fa-2x' />
+        </a>
+        <a className='spotify' href='https://open.spotify.com/artist/2wQZi1X99quj4L7VUuChnu'>
+          <i className='fab fa-spotify fa-2x' />
         </a>
       </div>
 
       <div className='divider' />
 
       <div className='my-projects'>
-        <h2>My Projects</h2>
+        <h2>My Apps</h2>
 
         <div className='projects'>
           <div className='project'>
-            <img className='logo' src={ChkSndLogo} />
+            <img className='logo' src={ChkSndLogo} alt='logo' />
             <h2 className='name'>ChkSnd</h2>
             <p className='description'>ChkSnd is a tool to create music<br />videos with visual accompaniment.<br /><br />Available for iOS and Android.</p>
             <a className='website' href='https://chksnd.github.io/'>Website</a>
           </div>
           <div className='project'>
-            <img className='logo' src={FortylinesLogo} />
+            <img className='logo' src={FortylinesLogo} alt='logo' />
             <h2 className='name'>Fortylines</h2>
             <p className='description'>Fortylines is a team of<br />young and ambitious people,<br />who build and deliver high-quality<br />IT solutions to the world.</p>
             <a className='website' href='https://fortylinesio.github.io/'>Website</a>
@@ -60,16 +64,16 @@ const App = () => {
         <h2>My Music</h2>
         <div className='soudcloud-tracks'>
           <div className='track'>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/738404512&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+            <iframe title='music-a' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/738404512&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
           </div>
           <div className='track'>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/734371576&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+            <iframe title='music-b' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/734371576&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
           </div>
           <div className='track'>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566240346&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+            <iframe title='music-c' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566240346&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
           </div>
           <div className='track'>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566233968&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <iframe title='music-d' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566233968&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
           </div>
         </div>
       </div>
@@ -78,10 +82,9 @@ const App = () => {
 
       <div className='footer'>
         <div>&lt;&gt; with &hearts;</div>
-        <div>&copy; Aibek Mazhitov 2020</div>
-        <div>amazhitov [at] gmail [dot] com</div>
+        <div>{new Date().getFullYear()} &copy; aimazh</div>
       </div>
-    </div>
+    </div >
   )
 }
 

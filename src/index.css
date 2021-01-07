@@ -20,8 +20,8 @@ html, body {
     margin-bottom: 32px;
 }
 
-.app > .header > ul {
-    list-style: none;
+.app > .header > .bio {
+    line-height: 32px;
 }
 
 .app > .header a {
@@ -43,20 +43,32 @@ html, body {
     margin-right: 24px;
 }
 
-.app > .social > .leetcode {
+.app > .social .leetcode {
     color: #000;
 }
 
-.app > .social > .github {
+.app > .social .github {
     color: #24292e;
 }
 
-.app > .social > .linkedin {
+.app > .social .linkedin {
     color: #0073b1;
 }
 
-.app > .social > .telegram {
+.app > .social .telegram {
     color: #28a7e5;
+}
+
+.app > .social .instagram {
+    color: #E1306C;
+}
+
+.app > .social .spotify {
+    color: #1db954;
+}
+
+.app > .social .soundcloud {
+    color: #ff3300;
 }
 
 .app > .my-projects {
@@ -93,7 +105,7 @@ html, body {
 }
 
 .app > .my-projects > .projects > .project > .website {
-    display: block;
+    display: inline-block;
     margin-top: 16px;
     color: blue;
 }
@@ -124,4 +136,25 @@ html, body {
     max-width: 768px;
     margin: 0 auto;
     margin-bottom: 32px;
+}
+
+/* https://stackoverflow.com/a/54702294/10309700 */
+
+.rainbow:hover {
+    background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 3s ease-in-out infinite;
+    background-size: 400% 100%;
+    cursor: none;
+}
+
+@keyframes rainbow-animation {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
 }
