@@ -79,6 +79,7 @@ const App = () => {
       <div className='footer'>
         <div>&lt;&gt; with &hearts;</div>
         <div>&copy; Aibek Mazhitov 2020</div>
+        <div>amazhitov [at] gmail [dot] com</div>
       </div>
     </div>
   )
