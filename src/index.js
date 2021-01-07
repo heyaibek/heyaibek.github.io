@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 
 import ChkSndLogo from './assets/images/chksnd-logo.png'
+import FortylinesLogo from './assets/images/fortylines.svg'
 
 const App = () => {
   return (
@@ -18,9 +19,6 @@ const App = () => {
       </div>
 
       <div className='social'>
-        <a className='instagram' href='https://www.instagram.com/aimazh_/'>
-          <i className='fab fa-instagram fa-2x' />
-        </a>
         <a className='github' href='https://github.com/aimazh'>
           <i className='fab fa-github fa-2x' />
         </a>
@@ -29,6 +27,9 @@ const App = () => {
         </a>
         <a className='telegram' href='https://t.me/brakatamusic'>
           <i className='fab fa-telegram fa-2x' />
+        </a>
+        <a className='leetcode' href='https://leetcode.com/aimazh'>
+          <i className='fab fa-codepen fa-2x' />
         </a>
       </div>
 
@@ -43,6 +44,12 @@ const App = () => {
             <h2 className='name'>ChkSnd</h2>
             <p className='description'>ChkSnd is a tool to create music<br />videos with visual accompaniment.<br /><br />Available for iOS and Android.</p>
             <a className='website' href='https://chksnd.github.io/'>Website</a>
+          </div>
+          <div className='project'>
+            <img className='logo' src={FortylinesLogo} />
+            <h2 className='name'>Fortylines</h2>
+            <p className='description'>Fortylines is a team of<br />young and ambitious people,<br />who build and deliver high-quality<br />IT solutions to the world.</p>
+            <a className='website' href='https://fortylinesio.github.io/'>Website</a>
           </div>
         </div>
       </div>
@@ -70,8 +77,8 @@ const App = () => {
       <div className='divider' />
 
       <div className='footer'>
-        <div>Developed with &heart;</div>
-        <div>&copy; 2020 Aibek Mazhitov</div>
+        <div>&lt;&gt; with &hearts;</div>
+        <div>&copy; Aibek Mazhitov 2020</div>
       </div>
     </div>
   )

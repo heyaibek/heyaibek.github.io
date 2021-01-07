@@ -43,8 +43,8 @@ html, body {
     margin-right: 24px;
 }
 
-.app > .social > .instagram {
-    color: #E1306C;
+.app > .social > .leetcode {
+    color: #000;
 }
 
 .app > .social > .github {
@@ -69,7 +69,14 @@ html, body {
 
 .app > .my-projects > .projects > .project {
     margin-top: 32px;
-} 
+}
+
+.app > .my-projects > .projects > .project:not(:last-child)::after {
+    content: '* * *';
+    display: block;
+    margin-top: 32px;
+    color: #999;
+}
 
 .app > .my-projects > .projects > .project > .logo {
     width: 96px;
