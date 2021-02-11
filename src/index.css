@@ -140,7 +140,7 @@ html, body {
 
 /* https://stackoverflow.com/a/54702294/10309700 */
 
-.rainbow:hover {
+.rainbow {
     background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
     -webkit-background-clip: text;
     background-clip: text;

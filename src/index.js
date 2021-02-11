@@ -29,9 +29,6 @@ const App = () => {
         <a className='leetcode' href='https://leetcode.com/aimazh'>
           <i className='fab fa-codepen fa-2x' />
         </a>
-        <a className='instagram' href='https://instagram.com/brakatamusic'>
-          <i className='fab fa-instagram fa-2x' />
-        </a>
         <a className='spotify' href='https://open.spotify.com/artist/2wQZi1X99quj4L7VUuChnu'>
           <i className='fab fa-spotify fa-2x' />
         </a>
