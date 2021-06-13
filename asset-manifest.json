@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.3558dee6.chunk.css",
-    "main.js": "/static/js/main.a994c005.chunk.js",
-    "main.js.map": "/static/js/main.a994c005.chunk.js.map",
+    "main.css": "/static/css/main.a74d4055.chunk.css",
+    "main.js": "/static/js/main.d8332a60.chunk.js",
+    "main.js.map": "/static/js/main.d8332a60.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1f3ca235.js",
     "runtime-main.js.map": "/static/js/runtime-main.1f3ca235.js.map",
     "static/js/2.30c64fb9.chunk.js": "/static/js/2.30c64fb9.chunk.js",
     "static/js/2.30c64fb9.chunk.js.map": "/static/js/2.30c64fb9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b94a58b7d4be634e9cb1b0f3eebb92b1.js": "/precache-manifest.b94a58b7d4be634e9cb1b0f3eebb92b1.js",
+    "precache-manifest.214a777f0817e5a9810ca3bebfcb145e.js": "/precache-manifest.214a777f0817e5a9810ca3bebfcb145e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.3558dee6.chunk.css.map": "/static/css/main.3558dee6.chunk.css.map",
+    "static/css/main.a74d4055.chunk.css.map": "/static/css/main.a74d4055.chunk.css.map",
     "static/js/2.30c64fb9.chunk.js.LICENSE.txt": "/static/js/2.30c64fb9.chunk.js.LICENSE.txt",
     "static/media/chksnd-logo.png": "/static/media/chksnd-logo.6d49b9eb.png",
     "static/media/fortylines.svg": "/static/media/fortylines.ad155b97.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1f3ca235.js",
     "static/js/2.30c64fb9.chunk.js",
-    "static/css/main.3558dee6.chunk.css",
-    "static/js/main.a994c005.chunk.js"
+    "static/css/main.a74d4055.chunk.css",
+    "static/js/main.d8332a60.chunk.js"
   ]
 }
