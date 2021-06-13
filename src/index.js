@@ -7,6 +7,12 @@ import ChkSndLogo from './assets/images/chksnd-logo.png'
 import FortylinesLogo from './assets/images/fortylines.svg'
 
 const App = () => {
+  React.useEffect(() => {
+    if (window.location.pathname.indexOf('zoom') > -1) {
+      window.location = 'https://us05web.zoom.us/j/4680273949'
+    }
+  }, [])
+
   return (
     <div className='app'>
       <div className='header'>
@@ -14,7 +20,7 @@ const App = () => {
         <div className='bio'>
           <p>Hi there <span role='img' aria-label='hands-up'>👋</span>!</p>
           <p>I'm a Software Engineer at <a href='https://www.flatex.com/'>flatexAG</a>.</p>
-          <p>I also founded <a href='https://aimazh.github.io/chksndapp/'>ChkSnd</a>.</p>
+          <p>I also created <a href='https://aimazh.github.io/chksndapp/'>ChkSnd</a>.</p>
           <p>In my free time I produce electronic <a href='https://soundcloud.com/brakata'>music</a>.</p>
         </div>
       </div>

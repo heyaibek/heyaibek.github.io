@@ -147,7 +147,6 @@ html, body {
     color: transparent;
     animation: rainbow-animation 3s ease-in-out infinite;
     background-size: 400% 100%;
-    cursor: none;
 }
 
 @keyframes rainbow-animation {
