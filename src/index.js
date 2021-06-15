@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom'
 
 import './index.css'
 
+import LeetCodeLogo from './assets/images/leetcode.png'
 import ChkSndLogo from './assets/images/chksnd-logo.png'
 import FortylinesLogo from './assets/images/fortylines.svg'
+
+import { MyMusic } from './MyMusic';
 
 const App = () => {
   React.useEffect(() => {
@@ -32,7 +35,7 @@ const App = () => {
         <a className='github' href='https://github.com/aimazh'>
           <i className='fab fa-github fa-2x' />
         </a>
-        <a className='leetcode' href='https://leetcode.com/aimazh' />
+        <a className='leetcode' href='https://leetcode.com/aimazh' style={{ backgroundImage: LeetCodeLogo }} />
         <a className='spotify' href='https://open.spotify.com/user/217dpiqihjneujcuut5kl5wma?si=d7d861385e724b68'>
           <i className='fab fa-spotify fa-2x' />
         </a>
@@ -47,7 +50,7 @@ const App = () => {
           <div className='project'>
             <img className='logo' src={ChkSndLogo} alt='logo' />
             <h2 className='name'>ChkSnd</h2>
-            <p className='description'>ChkSnd is a tool to create music<br />videos with visual accompaniment.<br /><br />Available for iOS and Android.</p>
+            <p className='description'>ChkSnd is a tool to create music<br />videos with a visual audio spectrum.<br /><br />Available for iOS and Android.</p>
             <a className='website' href='https://chksnd.github.io/'>Website</a>
           </div>
           <div className='project'>
@@ -61,23 +64,7 @@ const App = () => {
 
       <div className='divider' />
 
-      <div className='my-music'>
-        <h2>My Music</h2>
-        <div className='soudcloud-tracks'>
-          <div className='track'>
-            <iframe title='music-a' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/738404512&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-          </div>
-          <div className='track'>
-            <iframe title='music-b' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/734371576&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-          </div>
-          <div className='track'>
-            <iframe title='music-c' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566240346&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-          </div>
-          <div className='track'>
-            <iframe title='music-d' width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566233968&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-          </div>
-        </div>
-      </div>
+      <MyMusic />
 
       <div className='divider' />
 
