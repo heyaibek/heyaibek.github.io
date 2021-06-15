@@ -32,9 +32,7 @@ const App = () => {
         <a className='github' href='https://github.com/aimazh'>
           <i className='fab fa-github fa-2x' />
         </a>
-        <a className='leetcode' href='https://leetcode.com/aimazh'>
-          <i className='fab fa-codepen fa-2x' />
-        </a>
+        <a className='leetcode' href='https://leetcode.com/aimazh' />
         <a className='spotify' href='https://open.spotify.com/user/217dpiqihjneujcuut5kl5wma?si=d7d861385e724b68'>
           <i className='fab fa-spotify fa-2x' />
         </a>
