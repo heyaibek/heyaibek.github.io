@@ -10,6 +10,10 @@ html, body {
     font-size: 12pt;
 }
 
+a {
+    text-decoration: none;
+}
+
 .app > .header {
     text-align: center;
     margin-top: 64px;
@@ -27,7 +31,6 @@ html, body {
 .app > .header a {
     color: black;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .app > .header a:hover {
@@ -166,5 +169,17 @@ html, body {
     }
     50% {
         background-position: 100% 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .app > .header a,
+    .app > .my-projects > .projects > .project > .website {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .app > .social .github {
+        color: white;
     }
 }
