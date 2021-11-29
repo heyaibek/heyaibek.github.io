@@ -137,12 +137,16 @@ html, body {
     color: gray;
 }
 
+.app > .divider::before {
+    content: "* * *";
+}
+
 .app > .divider {
-    background-color: lightgray;
-    height: 1px;
     max-width: 768px;
     margin: 0 auto;
     margin-bottom: 32px;
+    text-align: center;
+    color: gray;
 }
 
 /* https://stackoverflow.com/a/54702294/10309700 */
