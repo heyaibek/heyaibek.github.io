@@ -122,6 +122,7 @@ a {
 
 .app > .my-music {
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .app > .my-music > .soudcloud-tracks {
@@ -132,6 +133,22 @@ a {
 
 .app > .my-music > .soudcloud-tracks > .track {
     margin-top: 32px;
+}
+
+.app > .my-music > a {
+    background-color: #f50;
+    color: white;
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.app > .my-music > a > .logo-soundcloud {
+    display: inline-block;
+    width: 104px;
+    height: 16px;
+    background: url(./assets/images/soundcloud.png);
 }
 
 .app > .footer {

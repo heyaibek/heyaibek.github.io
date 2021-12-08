@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom'
 
 import './index.css'
 
-import LeetCodeLogo from './assets/images/leetcode.png'
 import ChkSndLogo from './assets/images/chksnd-logo.png'
-import FortylinesLogo from './assets/images/fortylines.svg'
 
 import { MyMusic } from './MyMusic';
 
