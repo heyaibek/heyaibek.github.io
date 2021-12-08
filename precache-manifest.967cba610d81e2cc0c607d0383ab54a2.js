@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e25b95d06133a08c3c7b8a9e3e4474b3",
+    "revision": "42b2c80d36d646aa0e690c8a58d64e53",
     "url": "/index.html"
   },
   {
-    "revision": "ac4220f4124a1648993d",
-    "url": "/static/css/main.9c0c166f.chunk.css"
+    "revision": "6b1c1602ac021a486c77",
+    "url": "/static/css/main.ed4868a0.chunk.css"
   },
   {
     "revision": "6054387e99709d68d6c3",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.8d834963.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac4220f4124a1648993d",
-    "url": "/static/js/main.b24b3bf0.chunk.js"
+    "revision": "6b1c1602ac021a486c77",
+    "url": "/static/js/main.0e1c673b.chunk.js"
   },
   {
     "revision": "e8d5ca278708057f20ce",
@@ -26,13 +26,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6d49b9eb0e8e6ff05bd0e5046099f8f6",
     "url": "/static/media/chksnd-logo.6d49b9eb.png"
-  },
-  {
-    "revision": "ad155b971c5af7187917443cb8fb86ca",
-    "url": "/static/media/fortylines.ad155b97.svg"
-  },
-  {
-    "revision": "ca674b5186b28e2b0edae538ee5388d0",
-    "url": "/static/media/leetcode.ca674b51.png"
   }
 ]);
