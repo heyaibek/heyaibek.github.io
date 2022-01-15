@@ -20,7 +20,7 @@ const App = () => {
         <h1 className='rainbow'>Aibek Mazhitov</h1>
         <div className='bio'>
           <p>Hi there <span role='img' aria-label='hands-up'>👋</span></p>
-          <p>I'm a Software Engineer at <a href='https://www.flatex.com/'>flatexDEGIRO</a>.</p>
+          <p>I'm a Software Engineer at <a href='https://spotify.com/'>Spotify</a>.</p>
           <p>I also created <a href='https://chksnd.app'>ChkSnd</a>.</p>
           <p>In my free time I produce electronic <a href='https://soundcloud.com/brakata'>music</a>.</p>
         </div>
@@ -29,9 +29,6 @@ const App = () => {
       <div className='social'>
         <a className='linkedin' href='https://www.linkedin.com/in/aimazh/'>
           <i className='fab fa-linkedin fa-2x' />
-        </a>
-        <a className='instagram' href='https://instagram.com/brakatagoi'>
-          <i className='fab fa-instagram fa-2x' />
         </a>
         <a className='github' href='https://github.com/aimazh'>
           <i className='fab fa-github fa-2x' />
