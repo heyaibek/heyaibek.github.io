@@ -29,7 +29,7 @@ const App = () => (
     </div>
     <ul>
       <li>
-        <span role='img' aria-label=':laptop:'>😎</span>
+        <span role='img' aria-label=':cool:'>😎</span>
         <span>&nbsp;</span>
         <span>i'm software engineer @ spotify</span>
       </li>
@@ -39,7 +39,7 @@ const App = () => (
         <span>i'm creator of chksnd</span>
       </li>
       <li>
-        <span role='img' aria-label=':laptop:'>🎹</span>
+        <span role='img' aria-label=':piano:'>🎹</span>
         <span>&nbsp;</span>
         <span>i produce electronic music</span>
       </li>
