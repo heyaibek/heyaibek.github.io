@@ -8,35 +8,39 @@ const App = () => (
     <nav>
       <a href='https://linkedin.com/in/aimazh' target='_blank' rel='noopener noreferrer'>
         <i className='fab fa-linkedin fa-lg' />
-        <span>linkedin</span>
+      </a>
+      <a href='https://instagram.com/aimkatagoi' target='_blank' rel='noopener noreferrer'>
+        <i className='fab fa-instagram fa-lg' />
       </a>
       <a href='https://github.com/aimazh' target='_blank' rel='noopener noreferrer'>
         <i className='fab fa-github fa-lg' />
-        <span>github</span>
+      </a>
+      <a href='https://hyperfollow.com/brakata' target='_blank' rel='noopener noreferrer'>
+        <i className='fab fa-spotify fa-lg' />
+      </a>
+      <a href='https://discord.gg/hMtbMqa67f' target='_blank' rel='noopener noreferrer'>
+        <i className='fab fa-discord fa-lg' />
+        <span>discord</span>
       </a>
       <a href='https://chksnd.app' target='_blank' rel='noopener noreferrer'>
         <i className='fas fa-globe fa-lg' />
         <span>chksnd</span>
       </a>
-      <a href='https://hyperfollow.com/brakata' target='_blank' rel='noopener noreferrer'>
-        <i className='fab fa-spotify fa-lg' />
-        <span>music</span>
-      </a>
     </nav>
     <div>
-      <h2>aibek mazhitov</h2>
-      <p>hi there <span role='img' aria-label=':wave:'>👋🏻</span></p>
+      <h2>hi there <span role='img' aria-label=':wave:'>👋🏻</span></h2>
+      <p>my name is aibek mazhitov</p>
     </div>
     <ul>
       <li>
         <span role='img' aria-label=':cool:'>😎</span>
         <span>&nbsp;</span>
-        <span>i'm software engineer @ spotify</span>
+        <span>i'm a software engineer @ spotify</span>
       </li>
       <li>
         <span role='img' aria-label=':laptop:'>👨🏻‍💻</span>
         <span>&nbsp;</span>
-        <span>i'm creator of chksnd</span>
+        <span>i'm a creator of chksnd</span>
       </li>
       <li>
         <span role='img' aria-label=':piano:'>🎹</span>
