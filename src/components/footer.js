@@ -2,13 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: var(--footer-color);
   width: 100%;
+  max-width: 768px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  padding: 32px;
+  padding: 32px 16px;
+  
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 const Rainbow = styled.p`
@@ -34,6 +40,8 @@ const Rainbow = styled.p`
 export const Footer = () => (
   <FooterContainer>
     <p>Copyright &copy; 2022</p>
-    <Rainbow>&lt;&gt; by @aimazh</Rainbow>
+    <Rainbow>
+      &lt;&gt; by <strong>@aimkata</strong>
+    </Rainbow>
   </FooterContainer>
 );

@@ -1,17 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import styled, { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer, Header } from './components';
-import { About, Blog, Home, Music } from './pages';
-
-// import './index.scss';
+import { Online, Blog, Home, Music } from './pages';
 
 const GlobalStyle = createGlobalStyle`
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 :root {
   // fonts
   --font: 'Noto Serif', serif;
@@ -32,6 +26,16 @@ const GlobalStyle = createGlobalStyle`
 
 html,body,#root{
   height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-title);
+  letter-spacing: -1.5px;
 }
 `;
 
@@ -54,10 +58,10 @@ const App = () => {
       <Header />
       <Main>
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route path="/blog" element={Blog} />
-          <Route path="/music" element={Music} />
-          <Route path="/about" element={About} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/online" element={<Online />} />
         </Routes>
       </Main>
       <Footer />
@@ -65,10 +69,10 @@ const App = () => {
   );
 };
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <BrowserRouter>
     <GlobalStyle />
     <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 );
