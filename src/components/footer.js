@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 32px 16px;
+  padding: 64px 16px;
 
   @media (max-width: 600px) {
     flex-direction: column;

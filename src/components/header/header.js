@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${sizes.padding}px;
+  padding: ${sizes.padding * 4}px ${sizes.padding}px;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -89,13 +89,6 @@ export const Header = () => (
       <Image src={Ava} alt="Aibek Mazhitov" />
     </Title>
     <Nav>
-      <NavLink to="/" end>
-        Home
-      </NavLink>
-      <NavLink to="/blog">Blog</NavLink>
-      <a href="https://hyperfollow.com/brakata" target="_blank" rel="noreferrer">
-        Music
-      </a>
       <a
         className="social linkedin"
         href="https://linkedin.com/in/aimazh"

@@ -18,20 +18,20 @@ const Post = styled(NavLink)`
   &:hover {
     color: var(--color-primary);
   }
-  
+
   &:not(:last-child) {
     margin-bottom: 16px;
   }
 
   & > .info {
     font-size: 1rem;
-    max-width: 160px;
+    max-width: 150px;
     width: 100%;
     color: var(--color-text-offset);
   }
 
   & > .title {
-    transition: margin-left .25s ease;
+    transition: margin-left 0.25s ease;
   }
 
   &:hover > .title {
@@ -45,7 +45,7 @@ export const PostsWidget = () => {
     <div>
       {blog.posts.map((post) => (
         <Post key={post.id} to={`/blog/${post.id}`}>
-          <div className="info">{new Date(post.date).toDateString()}</div>
+          <div className="info">{new Date(post.date).toLocaleDateString()}</div>
           <div className="title">{post.title}</div>
         </Post>
       ))}

@@ -6,9 +6,17 @@ import {
   atomOneLight as light,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+light.hljs.padding = '2rem';
+light.hljs.borderRadius = '8px';
+
+dark.hljs.padding = '2rem';
+dark.hljs.borderRadius = '8px';
+
 export const FinalCode = ({ children, className }) => {
   const [language, setLanguage] = useState(undefined);
-  const [isDark] = useState(false);
+  const [isDark, setIsDark] = useState(
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
   const [isCopied, setIsCopied] = useState(false);
 
   const setCopied = () => {
@@ -24,10 +32,17 @@ export const FinalCode = ({ children, className }) => {
     }
   }, [className]);
 
+  useEffect(() => {
+    let listener = (event) => {
+      setIsDark(event.matches);
+    };
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', listener);
+  }, []);
+
   return (
     <div className="code">
       <CopyToClipboard text={children}>
-        <button onClick={() => setCopied()}>
+        <button hidden onClick={() => setCopied()}>
           {isCopied ? (
             <span title="Copied!">Paste</span>
           ) : (

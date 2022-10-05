@@ -23,7 +23,7 @@ const Headline = styled.h1`
 
 const Section = styled.section`
   &:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 64px;
   }
 `;
 
