@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
-import Markdown from "markdown-to-jsx";
-import {Code} from "./";
+import React, { useEffect } from 'react';
+import Markdown from 'markdown-to-jsx';
+import { Code } from './';
 import filenames from '../_posts/index.json';
 
 export const Posts = () => {
@@ -17,19 +17,21 @@ export const Posts = () => {
           overrides: {
             pre: {
               component: Code,
-            }
-          }
+            },
+          },
         }}
-      >{data}</Markdown>
+      >
+        {data}
+      </Markdown>
     );
   };
 
   useEffect(() => {
     setPosts([]);
-    filenames.forEach(async filename => {
+    filenames.forEach(async (filename) => {
       const post = await loadPost(filename);
-      setPosts(prevState => [...prevState, post]);
-    })
+      setPosts((prevState) => [...prevState, post]);
+    });
   }, []);
 
   return (
@@ -37,5 +39,5 @@ export const Posts = () => {
       <h2>Blog posts</h2>
       <div>{posts}</div>
     </div>
-  )
+  );
 };
