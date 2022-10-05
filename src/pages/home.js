@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Playlist } from '../components';
+import { Playlist, PostsWidget } from '../components';
 import styled from 'styled-components';
 
 const Subtitle = styled.h2`
@@ -47,6 +47,7 @@ export const Home = () => (
     </Section>
     <Section>
       <Subtitle>Latest Posts</Subtitle>
+      <PostsWidget />
     </Section>
     <Section>
       <Subtitle>Latest Tracks</Subtitle>
