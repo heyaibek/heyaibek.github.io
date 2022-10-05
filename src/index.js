@@ -18,10 +18,6 @@ const App = () => (
       <a href='https://hyperfollow.com/brakata' target='_blank' rel='noopener noreferrer'>
         <i className='fab fa-spotify fa-lg' />
       </a>
-      <a href='https://discord.gg/hMtbMqa67f' target='_blank' rel='noopener noreferrer'>
-        <i className='fab fa-discord fa-lg' />
-        <span>discord</span>
-      </a>
       <a href='https://chksnd.app' target='_blank' rel='noopener noreferrer'>
         <i className='fas fa-globe fa-lg' />
         <span>chksnd</span>
