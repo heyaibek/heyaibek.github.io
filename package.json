@@ -15,7 +15,8 @@
     "react-router": "^6.4.1",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "predeploy": "yarn build",

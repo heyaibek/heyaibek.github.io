@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
   // fonts
-  --font: 'IBM Plex Mono'; // "Roboto Mono", "Vazirmatn";
-  --font-title: 'Lexend Deca';
+  --font: 'Noto Serif', serif;
+  --font-title: 'Open Sans', sans-serif;
 
   // colors
   --bg-color: #ffffff;
+  --footer-color: #f7fafb;
   --main-color: #56949f;
-  --text-color: #286983;
+  --text-color: #3a4145;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,8 +31,6 @@
 html,
 body {
   font-family: var(--font);
-  font-weight: 500;
-  //font-size: calc(0.70em + 1vmin);
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -59,6 +58,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
+  letter-spacing: -2px;
 }
 
 ul {
@@ -70,49 +70,7 @@ img[alt=h200] {
 }
 
 .container {
-  max-width: 768px;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2em;
-  padding: 0 2em;
+  max-width: 768px;
   margin: 0 auto;
-
-  & > nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-
-    & > * {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5em;
-    }
-  }
-}
-
-.rainbow {
-  background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-animation 3s ease-in-out infinite;
-  background-size: 400% 100%;
-
-  @keyframes rainbow-animation {
-
-    0%,
-    100% {
-      background-position: 0 0;
-    }
-
-    50% {
-      background-position: 100% 0;
-    }
-  }
 }
