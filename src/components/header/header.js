@@ -24,30 +24,50 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const Title = styled.div`
-  width: 100%;
+const Title = styled(NavLink)`
   display: flex;
   align-items: center;
   gap: ${sizes.gap}px;
+
+  &:before {
+    display: none;
+  }
 
   & > h2 {
     font-size: 1.2rem;
   }
 
   @media (max-width: 600px) {
+    width: 100%;
     flex-direction: column;
     gap: ${sizes.gap / 2}px;
   }
 `;
 
 const Nav = styled.nav`
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: ${sizes.gap}px;
 
   @media (max-width: 600px) {
+    width: 100%;
     gap: ${sizes.gap / 2}px;
+  }
+
+  & > a:hover {
+    &.github {
+      color: #24292e;
+    }
+    &.linkedin {
+      color: #0073b1;
+    }
+    &.instagram {
+      color: #e1306c;
+    }
+  }
+
+  & > a.social:before {
+    display: none;
   }
 `;
 
@@ -65,17 +85,41 @@ const Image = styled.img`
 
 export const Header = () => (
   <HeaderContainer>
-    <Title>
+    <Title to="/">
       <Image src={Ava} alt="Aibek Mazhitov" />
-      <h2>Aibek Mazhitov</h2>
     </Title>
     <Nav>
       <NavLink to="/" end>
         Home
       </NavLink>
       <NavLink to="/blog">Blog</NavLink>
-      <NavLink to="/music">Music</NavLink>
-      <NavLink to="/online">Online</NavLink>
+      <a href="https://hyperfollow.com/brakata" target="_blank" rel="noreferrer">
+        Music
+      </a>
+      <a
+        className="social linkedin"
+        href="https://linkedin.com/in/aimazh"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i className="fab fa-linkedin fa-lg" />
+      </a>
+      <a
+        className="social github"
+        href="https://github.com/aimkata"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i className="fab fa-github fa-lg" />
+      </a>
+      <a
+        className="social instagram"
+        href="https://instagram.com/aimkatagoi"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i className="fab fa-instagram fa-lg" />
+      </a>
     </Nav>
   </HeaderContainer>
 );

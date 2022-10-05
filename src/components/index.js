@@ -4,3 +4,4 @@ export * from './footer';
 export * from './profile';
 export * from './posts';
 export * from './code';
+export * from './playlist';
