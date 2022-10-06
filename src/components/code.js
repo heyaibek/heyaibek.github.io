@@ -32,7 +32,7 @@ export const FinalCode = ({ children, className }) => {
   }, [className]);
 
   return (
-    <div className="code">
+    <div className="code" style={{ margin: `32px 0` }}>
       <CopyToClipboard text={children}>
         <button hidden onClick={() => setCopied()}>
           {isCopied ? (

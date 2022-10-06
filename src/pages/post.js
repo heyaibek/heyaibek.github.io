@@ -34,6 +34,37 @@ const Post = styled.div`
     font-weight: 300;
     line-height: 1.4;
   }
+
+  blockquote {
+    margin: 2rem 0;
+    padding-left: 35px;
+    border-left: 3px solid var(--color-secondary);
+
+    & > p::before {
+      content: open-quote;
+    }
+
+    & > p::after {
+      content: close-quote;
+    }
+  }
+
+  // code {
+  //   word-wrap: break-word;
+  //   font-family: Monaco, Menlo, Consolas, Courier New, monospace !important;
+  //   font-size: 12px;
+  //   font-variant-ligatures: none;
+  //   line-height: 1.50001;
+  //   tab-size: 4;
+  //   white-space: pre;
+  //   white-space: pre-wrap;
+  //   word-break: normal;
+  //   background-color: rgba(var(--sk_foreground_min, 29, 28, 29), 0.04);
+  //   border: 1px solid var(--saf-0);
+  //   border-radius: 3px;
+  //   color: rgba(var(--sk_raspberry_red, 224, 30, 90), 1);
+  //   padding: 2px 3px 1px;
+  // }
 `;
 
 const Header = styled.div`

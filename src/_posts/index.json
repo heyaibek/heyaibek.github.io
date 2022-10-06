@@ -1,24 +1,5 @@
 [
   {
-    "date": "2022-09-29T00:00:00.000Z",
-    "id": "my-first-blog",
-    "title": "My First Blog",
-    "hashtags": [
-      "general"
-    ],
-    "filename": "2022-09-29__My First Blog__general.md"
-  },
-  {
-    "date": "2022-10-05T00:00:00.000Z",
-    "id": "my-second-post",
-    "title": "My Second Post",
-    "hashtags": [
-      "java",
-      "coding"
-    ],
-    "filename": "2022-10-05__My Second Post__java,coding.md"
-  },
-  {
     "date": "2022-10-06T00:00:00.000Z",
     "id": "first-blog-post",
     "title": "First Blog Post",
