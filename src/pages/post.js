@@ -5,7 +5,7 @@ import { useParams } from 'react-router';
 import { useBlog } from '../hooks/useBlog';
 import { Code } from '../components';
 import moment from 'moment';
-import { NavLink, Navigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Info = styled.div`
   color: var(--color-text-offset);
@@ -59,7 +59,16 @@ export const BlogPost = () => {
   const postIdx = blog.posts.findIndex((post) => post.id === params.postId);
 
   if (postIdx < 0) {
-    return <Navigate to="/404" />;
+    return (
+      <Post>
+        <Header>
+          <NavLink to="/">
+            <i className="fa fa-arrow-left" /> <span>Go back</span>
+          </NavLink>
+        </Header>
+        <h2>Post Not Found</h2>
+      </Post>
+    );
   }
 
   const post = blog.posts[postIdx];

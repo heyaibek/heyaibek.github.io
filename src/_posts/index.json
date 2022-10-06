@@ -17,5 +17,14 @@
       "coding"
     ],
     "filename": "2022-10-05__My Second Post__java,coding.md"
+  },
+  {
+    "date": "2022-10-06T00:00:00.000Z",
+    "id": "first-blog-post",
+    "title": "First Blog Post",
+    "hashtags": [
+      "general"
+    ],
+    "filename": "2022-10-06__First Blog Post__general.md"
   }
 ]

@@ -46,7 +46,7 @@ export const PostsWidget = () => {
   return (
     <div>
       {posts.map((post) => (
-        <Post key={post.id} to={`/blog/${post.id}`}>
+        <Post key={post.id} to={`/${post.id}`}>
           <div className="info">{moment(post.date).format('MMM Do YY')}</div>
           <div className="title">{post.title}</div>
         </Post>
