@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './app';
 
 const GlobalStyle = createGlobalStyle`
@@ -117,8 +117,8 @@ a {
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <GlobalStyle />
     <App />
-  </BrowserRouter>
+  </HashRouter>
 );

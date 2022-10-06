@@ -44,8 +44,7 @@ export const Home = () => (
         <NavLink to="/blog">Blog</NavLink>.
       </p>
       <p>
-        Check out my <a href="#tracks">Music</a> and <a href="#posts">Articles</a> below. If you
-        like what you see stay in touch on{' '}
+        If you like what you see stay in touch on{' '}
         <a href="https://linkedin.com/in/aimazh" target="_blank" rel="noreferrer">
           LinkedIn
         </a>{' '}
