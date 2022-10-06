@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '../hooks/useTheme';
 
 const FooterContainer = styled.footer`
   width: 100%;
-  max-width: 768px;
+  max-width: ${(props) => props.sizes.width}px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 64px 16px;
+  gap: ${(props) => props.sizes.gap}px;
+  padding: ${(props) => props.sizes.padding * 4}px ${(props) => props.sizes.padding}px;
 
   @media (max-width: 600px) {
     flex-direction: column;
-    gap: 8px;
   }
 `;
 
@@ -37,11 +37,15 @@ const Rainbow = styled.p`
   }
 `;
 
-export const Footer = () => (
-  <FooterContainer>
-    <p>Copyright &copy; 2022</p>
-    <Rainbow>
-      &lt;&gt; by <strong>@aimkata</strong>
-    </Rainbow>
-  </FooterContainer>
-);
+export const Footer = () => {
+  const { sizes } = useTheme();
+
+  return (
+    <FooterContainer sizes={sizes}>
+      <p>Copyright &copy; 2022</p>
+      <Rainbow>
+        &lt;&gt; by <strong>@aimkata</strong>
+      </Rainbow>
+    </FooterContainer>
+  );
+};

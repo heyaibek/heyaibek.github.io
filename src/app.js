@@ -4,6 +4,7 @@ import { Footer, Header } from './components';
 import { Route, Routes } from 'react-router-dom';
 import { Blog, BlogPost, Home } from './pages';
 import { withBlog } from './hooks/useBlog';
+import { useTheme, withTheme } from './hooks/useTheme';
 
 const AppContainer = styled.div`
   display: flex;
@@ -14,16 +15,18 @@ const AppContainer = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  max-width: 768px;
+  max-width: ${(props) => props.sizes.width}px;
   width: 100%;
   padding: 16px;
 `;
 
 const App = () => {
+  const { sizes } = useTheme();
+
   return (
     <AppContainer>
       <Header />
-      <Main>
+      <Main sizes={sizes}>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
@@ -35,4 +38,4 @@ const App = () => {
   );
 };
 
-export default withBlog(App);
+export default withTheme(withBlog(App));

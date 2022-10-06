@@ -14,7 +14,6 @@ const Subtitle = styled.h2`
 const Headline = styled.h1`
   font-size: 2.5rem;
   letter-spacing: -2px;
-  margin-bottom: 16px;
 
   @media (max-width: 600px) {
     font-size: 1.5rem;

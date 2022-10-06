@@ -9,7 +9,6 @@ const Post = styled(NavLink)`
   font-size: 1.3rem;
   font-family: var(--font-title);
   font-weight: 400;
-  color: var(--text-color);
 
   &:before {
     display: none;

@@ -5,19 +5,18 @@ import {
   atomOneDark as dark,
   atomOneLight as light,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { useTheme } from '../hooks/useTheme';
 
-light.hljs.padding = '2rem';
+light.hljs.padding = '16px';
 light.hljs.borderRadius = '8px';
 
-dark.hljs.padding = '2rem';
+dark.hljs.padding = '16px';
 dark.hljs.borderRadius = '8px';
 
 export const FinalCode = ({ children, className }) => {
   const [language, setLanguage] = useState(undefined);
-  const [isDark, setIsDark] = useState(
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  );
   const [isCopied, setIsCopied] = useState(false);
+  const { isDark } = useTheme();
 
   const setCopied = () => {
     setIsCopied(true);
@@ -31,13 +30,6 @@ export const FinalCode = ({ children, className }) => {
       setLanguage(className.replace('lang-', ''));
     }
   }, [className]);
-
-  useEffect(() => {
-    let listener = (event) => {
-      setIsDark(event.matches);
-    };
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', listener);
-  }, []);
 
   return (
     <div className="code">
