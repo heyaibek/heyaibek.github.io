@@ -87,6 +87,10 @@ export const Header = () => {
         <Image sizes={sizes} src={Ava} alt="Aibek Mazhitov" />
       </Title>
       <Nav sizes={sizes}>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/blog">Blog</NavLink>
         <a
           className="social linkedin"
           href="https://linkedin.com/in/aimazh"
