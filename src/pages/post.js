@@ -4,13 +4,16 @@ import Markdown from 'markdown-to-jsx';
 import { useParams } from 'react-router';
 import { useBlog } from '../hooks/useBlog';
 import { Code } from '../components';
+import moment from 'moment';
+import { NavLink, Navigate } from 'react-router-dom';
 
 const Info = styled.div`
   color: var(--color-text-offset);
+  margin-bottom: 16px;
 `;
 
 const Post = styled.div`
-  img[alt='markdown-image'] {
+  img[alt='md-image'] {
     max-width: 100%;
     max-height: 500px;
     margin: 0 auto;
@@ -25,11 +28,27 @@ const Post = styled.div`
   h6 {
     margin-bottom: 24px;
   }
-  
+
   .lead {
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.4;
+  }
+`;
+
+const Header = styled.div`
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: var(--padding);
+
+  a {
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 `;
 
@@ -40,14 +59,19 @@ export const BlogPost = () => {
   const postIdx = blog.posts.findIndex((post) => post.id === params.postId);
 
   if (postIdx < 0) {
-    return <div>404</div>;
+    return <Navigate to="/404" />;
   }
 
   const post = blog.posts[postIdx];
 
   return (
     <Post>
-      <Info>{new Date(post.date).toLocaleDateString()}</Info>
+      <Header>
+        <NavLink to="/">
+          <i className="fa fa-arrow-left" /> <span>Go back</span>
+        </NavLink>
+        <Info>{moment(post.date).format('MMMM Do YYYY')}</Info>
+      </Header>
       <Markdown
         options={{
           overrides: {
@@ -55,8 +79,7 @@ export const BlogPost = () => {
               component: Code,
             },
           },
-        }}
-      >
+        }}>
         {post.content}
       </Markdown>
     </Post>

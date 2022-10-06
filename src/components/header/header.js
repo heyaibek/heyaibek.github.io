@@ -28,7 +28,8 @@ const Title = styled(NavLink)`
     display: none;
   }
 
-  & > h2 {
+  & > * {
+    font-family: var(--font-title);
     font-size: 1.2rem;
     margin: 0;
   }
@@ -45,11 +46,6 @@ const Nav = styled.nav`
   justify-content: center;
   gap: var(--gap);
 
-  @media (max-width: 600px) {
-    width: 100%;
-    gap: var(--halfGap);
-  }
-
   & > a:hover {
     &.github {
       color: var(--color-github);
@@ -64,6 +60,10 @@ const Nav = styled.nav`
 
   & > a.social:before {
     display: none;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 
@@ -84,9 +84,7 @@ export const Header = () => {
     <HeaderContainer>
       <Title to="/">
         <Image src={Ava} alt="Aibek Mazhitov" />
-        <h2>
-          <Rainbow>Aibek Mazhitov</Rainbow>
-        </h2>
+        <Rainbow>Aibek Mazhitov</Rainbow>
       </Title>
       <Nav>
         <a

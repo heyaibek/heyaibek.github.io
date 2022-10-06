@@ -31,7 +31,7 @@ export const Home = () => (
     <Section>
       <Headline>Hello, My name is Aibek</Headline>
       <p>
-        I'm a full-stack developer and a creator of{' '}
+        I'm a full-stack engineer and creator of{' '}
         <a href="https://chksnd.app" target="_blank" rel="noreferrer">
           ChkSnd
         </a>
@@ -43,13 +43,25 @@ export const Home = () => (
         and publish them on streaming services. And sometimes I write about engineering on my{' '}
         <NavLink to="/blog">Blog</NavLink>.
       </p>
+      <p>
+        Check out my <a href="#tracks">Music</a> and <a href="#posts">Articles</a> below. If you
+        like what you see stay in touch on{' '}
+        <a href="https://linkedin.com/in/aimazh" target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>{' '}
+        or{' '}
+        <a href="https://instagram.com/aimkatagoi" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+        .
+      </p>
     </Section>
     <Section>
-      <Subtitle>Latest Posts</Subtitle>
+      <Subtitle id="posts">Latest Posts</Subtitle>
       <PostsWidget />
     </Section>
     <Section>
-      <Subtitle>Latest Tracks</Subtitle>
+      <Subtitle id="tracks">Latest Tracks</Subtitle>
       <Playlist />
     </Section>
   </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useBlog } from '../hooks/useBlog';
 import { NavLink } from 'react-router-dom';
+import moment from 'moment';
 
 const Post = styled(NavLink)`
   display: flex;
@@ -24,30 +25,33 @@ const Post = styled(NavLink)`
 
   & > .info {
     font-size: 1rem;
-    max-width: 150px;
+    max-width: 110px;
     width: 100%;
     color: var(--color-text-offset);
   }
+`;
 
-  & > .title {
-    transition: margin-left 0.25s ease;
-  }
-
-  &:hover > .title {
-    margin-left: 8px;
+const Empty = styled.div`
+  &:after {
+    content: "Ups! It seems, I didn't write anything yet.";
   }
 `;
 
 export const PostsWidget = () => {
   const blog = useBlog();
+  const posts = blog.posts;
+
+  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <div>
-      {blog.posts.map((post) => (
+      {posts.map((post) => (
         <Post key={post.id} to={`/blog/${post.id}`}>
-          <div className="info">{new Date(post.date).toLocaleDateString()}</div>
+          <div className="info">{moment(post.date).format('MMM Do YY')}</div>
           <div className="title">{post.title}</div>
         </Post>
       ))}
+      {posts.length === 0 && <Empty />}
     </div>
   );
 };
