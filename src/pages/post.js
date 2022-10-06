@@ -25,6 +25,12 @@ const Post = styled.div`
   h6 {
     margin-bottom: 24px;
   }
+  
+  .lead {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
 `;
 
 export const BlogPost = () => {

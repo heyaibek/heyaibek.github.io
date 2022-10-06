@@ -6,6 +6,13 @@ import App from './app';
 
 const GlobalStyle = createGlobalStyle`
 :root {
+  // sizes
+  --width: 668px;
+  --padding: 16px;
+  --fourPaddings: 64px;
+  --gap: 16px;
+  --halfGap: 8px;
+
   // fonts
   --font: 'Noto Serif', serif;
   --font-title: 'Open Sans', sans-serif;
