@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect } from 'react';
-import filenames from '../_posts/index.json';
+import PostsData from '../_posts/index.json';
 
 const Post = function (id, date, title, hashtags, content) {
   this.id = id;
@@ -12,17 +12,9 @@ const Post = function (id, date, title, hashtags, content) {
 Post.prototype.doSomething = function () {};
 
 const loadPost = async (filename) => {
-  const parts = filename.split('.');
   const file = await import(`../_posts/${filename}`);
   const res = await fetch(file.default);
-  const data = await res.text();
-  return {
-    id: parts[1],
-    date: parts[0],
-    title: parts[1],
-    hashtags: [],
-    content: data,
-  };
+  return await res.text();
 };
 
 export const BlogContext = createContext({
@@ -35,9 +27,15 @@ export function withBlog(Component) {
 
     useEffect(() => {
       setPosts([]);
-      filenames.forEach(async (filename) => {
-        const post = await loadPost(filename);
-        setPosts((prevState) => [...prevState, post]);
+      PostsData.forEach(async (post) => {
+        const content = await loadPost(post.filename);
+        setPosts((prevState) => [
+          ...prevState,
+          {
+            ...post,
+            content,
+          },
+        ]);
       });
     }, []);
 

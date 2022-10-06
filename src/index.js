@@ -26,6 +26,9 @@ const GlobalStyle = createGlobalStyle`
   --color-primary: #ff335f;
   --color-primary-offset: #ff1447;
   --color-secondary: #43a9a3;
+  --color-github: #24292e;
+  --color-linkedin: #0073b1;
+  --color-instagram: #e1306c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +42,9 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #ff5277;
     --color-primary-offset: #ff2957;
     --color-secondary: #43a9a3;
+    --color-github: #ffffff;
+    --color-linkedin: #0073b1;
+    --color-instagram: #e1306c;
   }
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import Ava from './assets/ava.jpg';
+import { Rainbow } from '../rainbow';
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -29,6 +30,7 @@ const Title = styled(NavLink)`
 
   & > h2 {
     font-size: 1.2rem;
+    margin: 0;
   }
 
   @media (max-width: 600px) {
@@ -50,13 +52,13 @@ const Nav = styled.nav`
 
   & > a:hover {
     &.github {
-      color: #24292e;
+      color: var(--color-github);
     }
     &.linkedin {
-      color: #0073b1;
+      color: var(--color-linkedin);
     }
     &.instagram {
-      color: #e1306c;
+      color: var(--color-instagram);
     }
   }
 
@@ -82,12 +84,11 @@ export const Header = () => {
     <HeaderContainer>
       <Title to="/">
         <Image src={Ava} alt="Aibek Mazhitov" />
+        <h2>
+          <Rainbow>Aibek Mazhitov</Rainbow>
+        </h2>
       </Title>
       <Nav>
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/blog">Blog</NavLink>
         <a
           className="social linkedin"
           href="https://linkedin.com/in/aimazh"

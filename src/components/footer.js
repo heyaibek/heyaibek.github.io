@@ -1,45 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Rainbow } from './rainbow';
 
 const FooterContainer = styled.footer`
   width: 100%;
   max-width: var(--width);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--gap);
+  justify-content: center;
   padding: var(--fourPaddings) var(--padding);
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
-`;
-
-const Rainbow = styled.p`
-  background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-animation 3s ease-in-out infinite;
-  background-size: 400% 100%;
-
-  @keyframes rainbow-animation {
-    0%,
-    100% {
-      background-position: 0 0;
-    }
-
-    50% {
-      background-position: 100% 0;
-    }
-  }
 `;
 
 export const Footer = () => {
   return (
     <FooterContainer>
-      <p>Copyright &copy; {new Date().getFullYear()}</p>
       <Rainbow>
         &lt;&gt; by <strong>@aimkata</strong>
       </Rainbow>
