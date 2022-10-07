@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaimkata_github_io=self.webpackChunkaimkata_github_io||[]).push([[664],{5664:function(a,e,t){a.exports=t.p+"static/media/2022-10-06__First Blog Post__general.2bfef21a22a3f8e31ec3.md"}}]);
