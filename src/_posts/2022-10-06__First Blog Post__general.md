@@ -18,5 +18,5 @@ As a programmer I'm very curious about `JavaScript`, `Golang`, `Java`, `iOS Devl
 I'm starting this blog to write about things happening around me - tech, coding, different ideas and
 experimentations, etc. My hope is that the information posted here could be useful for someone else.
 
-If you like what you see stay in touch on [LinkedIn](https://linkedin.com/in/aimazh)
+If you like what you see stay in touch on [Twitter](https://twitter.com/aimkatagoi)
 or [Instagram](https://instagram.com/aimkatagoi).

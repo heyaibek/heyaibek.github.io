@@ -45,8 +45,8 @@ export const Home = () => (
       </p>
       <p>
         If you like what you see stay in touch on{' '}
-        <a href="https://linkedin.com/in/aimazh" target="_blank" rel="noreferrer">
-          LinkedIn
+        <a href="https://twitter.com/aimkatagoi" target="_blank" rel="noreferrer">
+          Twitter
         </a>{' '}
         or{' '}
         <a href="https://instagram.com/aimkatagoi" target="_blank" rel="noreferrer">
