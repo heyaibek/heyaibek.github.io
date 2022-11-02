@@ -101,6 +101,13 @@ export const Header = () => {
           rel="noreferrer">
           <i className="fab fa-instagram fa-lg" />
         </a>
+        <a
+          className="social github"
+          href="https://github.com/aimkata"
+          target="_blank"
+          rel="noreferrer">
+          <i className="fab fa-github fa-lg" />
+        </a>
       </Nav>
     </HeaderContainer>
   );

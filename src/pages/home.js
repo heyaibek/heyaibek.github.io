@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Playlist, PostsWidget } from '../components';
 import styled from 'styled-components';
+import { Playlist } from '../components';
 
 const Subtitle = styled.h2`
   font-size: 0.875rem;
