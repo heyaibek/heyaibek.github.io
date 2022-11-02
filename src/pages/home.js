@@ -40,24 +40,8 @@ export const Home = () => (
         <a href="https://hyperfollow.com/brakata" target="_blank" rel="noreferrer">
           Brakata
         </a>{' '}
-        and publish them on streaming services. And sometimes I write about engineering on my{' '}
-        <NavLink to="/blog">Blog</NavLink>.
+        and publish them on streaming services.
       </p>
-      <p>
-        If you like what you see stay in touch on{' '}
-        <a href="https://twitter.com/aimkatagoi" target="_blank" rel="noreferrer">
-          Twitter
-        </a>{' '}
-        or{' '}
-        <a href="https://instagram.com/aimkatagoi" target="_blank" rel="noreferrer">
-          Instagram
-        </a>
-        .
-      </p>
-    </Section>
-    <Section>
-      <Subtitle id="posts">Latest Posts</Subtitle>
-      <PostsWidget />
     </Section>
     <Section>
       <Subtitle id="tracks">Latest Tracks</Subtitle>

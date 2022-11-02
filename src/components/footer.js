@@ -9,6 +9,8 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   padding: var(--fourPaddings) var(--padding);
+  font-size: 11pt;
+  font-family: monospace;
 `;
 
 export const Footer = () => {

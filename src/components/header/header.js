@@ -89,8 +89,8 @@ export const Header = () => {
       <Nav>
         <a
           className="social linkedin"
-          href="https://twitter.com/aimkatagoi"
           target="_blank"
+          href="https://linkedin.com/in/aimkata"
           rel="noreferrer">
           <i className="fab fa-linkedin fa-lg" />
         </a>
