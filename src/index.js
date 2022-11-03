@@ -2,7 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
-import { Playlist, Footer } from './components';
+import { Footer, Playlist } from './components';
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -58,7 +58,7 @@ body {
   font-family: var(--font);
   font-size: 1rem;
   font-weight: 400;
-  padding: 16px;
+  padding: 0 16px;
 }
 
 pre {
@@ -74,22 +74,74 @@ h1,h2,h3,h4,h5,h6 {
 
 a {
   position: relative;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: bold;
+
+  &.github {
+    color: var(--color-github);
+    margin-right: 8px;
+  }
+
+  &.linkedin {
+    color: var(--color-linkedin);
+    margin-right: 8px;
+  }
+  
+  &.instagram {
+    color: var(--color-instagram);
+    margin-right: 8px;
+  }
 }
 
 #root {
-  --verticalOffset: 64px;
   width: 100%;
   max-width: 600px;
-  margin: var(--verticalOffset) auto !important;
-  padding-bottom: var(--verticalOffset);
+  margin: 0 auto;
+
+  &::before, &::after {
+    content: "";
+    display: block;
+    height: 32px;
+  }
 }
 `;
 
 const CustomLink = ({ href, ...props }) => {
-  if (href.indexOf('spotify') > -1) {
+  if (href.indexOf('playlist') > -1) {
     return <Playlist />;
+  }
+  if (href.indexOf('instagram') > -1) {
+    return (
+      <a
+        className="social instagram"
+        href="https://instagram.com/heyaibek"
+        target="_blank"
+        rel="noreferrer">
+        <i className="fab fa-instagram fa-2x" />
+      </a>
+    );
+  }
+  if (href.indexOf('github') > -1) {
+    return (
+      <a
+        className="social github"
+        href="https://github.com/heyaibek"
+        target="_blank"
+        rel="noreferrer">
+        <i className="fab fa-github fa-2x" />
+      </a>
+    );
+  }
+  if (href.indexOf('linkedin') > -1) {
+    return (
+      <a
+        className="social linkedin"
+        href="https://linkedin.com/in/heyaibek"
+        target="_blank"
+        rel="noreferrer">
+        <i className="fab fa-linkedin fa-2x" />
+      </a>
+    );
   }
   // eslint-disable-next-line
   return <a href={href} {...props} />;
