@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkheyaibek_github_io=self.webpackChunkheyaibek_github_io||[]).push([[664],{5664:function(e,i,t){e.exports=t.p+"static/media/2022-10-06__First Blog Post__general.2bfef21a22a3f8e31ec3.md"}}]);
