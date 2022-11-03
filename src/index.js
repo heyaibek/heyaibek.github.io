@@ -1,8 +1,8 @@
-import React from 'react';
+import Markdown from 'markdown-to-jsx';
+import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
-import { HashRouter } from 'react-router-dom';
-import App from './app';
+import { Playlist, Footer } from './components';
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   // fonts
   --font: 'Noto Serif', serif;
-  --font-title: 'Open Sans', sans-serif;
+  --font-title: system-ui, serif;
 
   // colors
   --color-bg: #ffffff;
@@ -48,22 +48,17 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html,body,#root{
   height: 100%;
 }
 
 body {
-  font-family: var(--font);
-  font-size: 1.1rem;
   background-color: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.8rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 16px;
 }
 
 pre {
@@ -74,51 +69,63 @@ h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-title);
   letter-spacing: -1px;
   line-height: 2rem;
-  margin-bottom: 3rem;
 }
 
-p {
-  margin-bottom: 1rem;
-}
 
 a {
-  text-decoration: none;
   position: relative;
-  color: var(--color-text);
+  color: var(--color-secondary);
   font-weight: bold;
-  transition: color 0.16s;
-  
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 6px;
-    width: 100%;
-    background-color: var(--color-border);
-    position: absolute;
-    bottom: 1px;
-    left: 4px;
-    z-index: -1;
-    transition: background-color 0.16s;
-  }
-  
-  &.active {
-    &:before {
-      background-color: var(--color-primary);
-    }
-  }
-  
-  &:hover {
-    &:before {
-      background-color: var(--color-primary);
-    }
-  }
+}
+
+#root {
+  --verticalOffset: 64px;
+  width: 100%;
+  max-width: 600px;
+  margin: var(--verticalOffset) auto !important;
+  padding-bottom: var(--verticalOffset);
 }
 `;
 
+const CustomLink = ({ href, ...props }) => {
+  if (href.indexOf('spotify') > -1) {
+    return <Playlist />;
+  }
+  // eslint-disable-next-line
+  return <a href={href} {...props} />;
+};
+
+const NextApp = () => {
+  const [data, setData] = useState('');
+  useEffect(() => {
+    const loadData = async () => {
+      const response = await fetch(
+        'https://raw.githubusercontent.com/heyaibek/heyaibek/main/README.md'
+      );
+      setData(await response.text());
+    };
+    loadData();
+  }, []);
+
+  return (
+    <Markdown
+      children={data}
+      options={{
+        overrides: {
+          a: CustomLink,
+        },
+      }}
+    />
+  );
+};
+
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  <>
     <GlobalStyle />
-    <App />
-  </HashRouter>
+    <NextApp />
+    <Footer>
+      &lt;&gt; by <strong>@heyaibek</strong>
+    </Footer>
+  </>
 );
