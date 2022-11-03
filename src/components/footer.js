@@ -17,7 +17,7 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <Rainbow>
-        &lt;&gt; by <strong>@aimkata</strong>
+        &lt;&gt; by <strong>@heyaibek</strong>
       </Rainbow>
     </FooterContainer>
   );

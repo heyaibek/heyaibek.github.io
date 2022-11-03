@@ -90,20 +90,20 @@ export const Header = () => {
         <a
           className="social linkedin"
           target="_blank"
-          href="https://linkedin.com/in/aimkata"
+          href="https://linkedin.com/in/heyaibek"
           rel="noreferrer">
           <i className="fab fa-linkedin fa-lg" />
         </a>
         <a
           className="social instagram"
-          href="https://instagram.com/aimkatagoi"
+          href="https://instagram.com/heyaibek"
           target="_blank"
           rel="noreferrer">
           <i className="fab fa-instagram fa-lg" />
         </a>
         <a
           className="social github"
-          href="https://github.com/aimkata"
+          href="https://github.com/heyaibek"
           target="_blank"
           rel="noreferrer">
           <i className="fab fa-github fa-lg" />
