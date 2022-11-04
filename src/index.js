@@ -1,8 +1,9 @@
 import Markdown from 'markdown-to-jsx';
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import Tilt from 'react-parallax-tilt';
 import { createGlobalStyle } from 'styled-components';
-import { Footer, Playlist } from './components';
+import { Footer, Playlist, Rainbow } from './components';
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   --halfGap: 8px;
 
   // fonts
-  --font: 'Noto Serif', serif;
+  --font: -apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
   --font-title: system-ui, serif;
 
   // colors
@@ -29,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
   --color-github: #24292e;
   --color-linkedin: #0073b1;
   --color-instagram: #e1306c;
+  --color-link: black;
+  --color-link-shadow: yellow;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +48,8 @@ const GlobalStyle = createGlobalStyle`
     --color-github: #ffffff;
     --color-linkedin: #0073b1;
     --color-instagram: #e1306c;
+    --color-link: yellow;
+    --color-link-shadow: rgba(255,255,255,0.5);
   }
 }
 
@@ -56,9 +61,10 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 400;
   padding: 0 16px;
+  line-height: 1.75rem;
 }
 
 pre {
@@ -71,11 +77,19 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 2rem;
 }
 
+h1 { font-size: 3rem; }
+h2 { font-size: 1.55rem; }
+
+h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 12px;
+}
 
 a {
+  text-decoration: none;
   position: relative;
-  color: var(--color-primary);
-  font-weight: bold;
+  color: var(--color-link);
+  text-shadow: 2px 2px 2px var(--color-link-shadow);
 
   &.github {
     color: var(--color-github);
@@ -101,7 +115,7 @@ a {
   &::before, &::after {
     content: "";
     display: block;
-    height: 32px;
+    height: 48px;
   }
 }
 `;
@@ -144,11 +158,32 @@ const CustomLink = ({ href, ...props }) => {
     );
   }
   // eslint-disable-next-line
-  return <a href={href} {...props} />;
+  return <a {...props} href={href} target="_blank" rel="noreferrer" />;
+};
+
+const CustomStrong = ({ children, ...props }) => {
+  if (children.indexOf('Aibek') > -1) {
+    return <Rainbow>{children}</Rainbow>;
+  }
+  return <strong children={children} {...props} />;
+};
+
+const CustomImage = ({ ...props }) => {
+  props.className = props.class;
+  delete props.class;
+  if (props.className === '3d') {
+    return (
+      <Tilt scale={1.1} transitionSpeed={2500} style={{ display: 'inline-block' }}>
+        <img alt="tilted" {...props} />
+      </Tilt>
+    );
+  }
+  return <img alt="default" {...props} />;
 };
 
 const NextApp = () => {
   const [data, setData] = useState('');
+
   useEffect(() => {
     const loadData = async () => {
       const response = await fetch(
@@ -165,6 +200,8 @@ const NextApp = () => {
       options={{
         overrides: {
           a: CustomLink,
+          strong: CustomStrong,
+          img: CustomImage,
         },
       }}
     />

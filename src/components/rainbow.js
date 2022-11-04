@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Rainbow = styled.p`
+export const Rainbow = styled.span`
   background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;
