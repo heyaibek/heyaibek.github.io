@@ -9,9 +9,9 @@
   --social-instagram: #e1306c;
   --social-tiktok: #24292e;
   --social-github: #000000;
-  --social-spotify: #1DB954;
+  --social-spotify: #1db954;
   --social-apple: #000000;
-  --social-youtube: #FF0000;
+  --social-youtube: #ff0000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,9 +22,9 @@
     --social-instagram: #e1306c;
     --social-tiktok: #ffffff;
     --social-github: #ffffff;
-    --social-spotify: #1DB954;
+    --social-spotify: #1db954;
     --social-apple: #ffffff;
-    --social-youtube: #FF0000;
+    --social-youtube: #ff0000;
   }
 }
 

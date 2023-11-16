@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,18 +10,13 @@ export default function Home() {
           My name is <span className="rainbow">Aibek</span>.
         </p>
         <p>
-          I&apos;m an ex-software engineer of{" "}
-          <a
-            href="https://spotify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          I&apos;m an ex-software engineer of{' '}
+          <a href="https://spotify.com/" target="_blank" rel="noopener noreferrer">
             Spotify
-          </a>{" "}
-          and creator of <Link href="/vibely">Vibely</Link>, a mobile app to
-          create music videos with an audio visualization. I also produce
-          electronic music as <Link href="/brakata">Brakata</Link> and publish
-          them on streaming services.
+          </a>{' '}
+          and creator of <Link href="/vibely">Vibely</Link>, a mobile app to create music videos
+          with an audio visualization. I also produce electronic music as{' '}
+          <Link href="/brakata">Brakata</Link> and publish them on streaming services.
         </p>
       </section>
       <section className="mb-6">
@@ -53,7 +48,7 @@ export default function Home() {
       <section className="mb-6">
         <h2>Follow me on Twitter 👨🏻‍💻</h2>
         <iframe
-          style={{ border: "none" }}
+          style={{ border: 'none' }}
           frameBorder="0"
           allowFullScreen=""
           width="100%"

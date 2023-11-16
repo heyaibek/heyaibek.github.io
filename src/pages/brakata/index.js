@@ -19,22 +19,19 @@ export default function Home() {
           <a
             href="https://open.spotify.com/artist/2wQZi1X99quj4L7VUuChnu"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-spotify fa-xl" />
           </a>
           <a
             href="https://music.apple.com/artist/brakata/1559429756"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-apple fa-xl" />
           </a>
           <a
             href="https://music.youtube.com/channel/UC4Ix-OYwrQWlYNRuztVwSKA?feature=share"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <i className="fab fa-youtube fa-xl" />
           </a>
         </div>
