@@ -34,13 +34,11 @@ export default function App({ Component, pageProps }) {
           Brakata
         </Link>
         <Link
-          className={`${
-            pathname.indexOf('/resume') > -1
-              ? 'text-slate-900 dark:text-slate-100'
-              : 'text-slate-400'
-          }`}
-          href="/resume">
-          Resume
+          className="text-slate-400"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/heyaibek/">
+          LinkedIn
         </Link>
         <div className="flex-1" />
       </nav>
@@ -49,9 +47,18 @@ export default function App({ Component, pageProps }) {
         <span>~</span>
         <span>~</span>
       </div>
-      <div className="px-10">
+      <div className="px-5">
         <Component {...pageProps} />
       </div>
+
+      <div className="text-center mt-10">
+        <Link href="/">
+          <span className="rainbow font-semibold text-xs font-mono">
+            &copy; {new Date().getFullYear()} &lt;/&gt; by @heyaibek
+          </span>
+        </Link>
+      </div>
+
       <div style={{ height: 50 }} />
     </main>
   );
