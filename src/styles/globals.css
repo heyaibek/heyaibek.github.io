@@ -101,7 +101,7 @@ ol > li {
 }
 
 a {
-  @apply text-yellow-500;
+  @apply text-yellow-400;
 }
 
 .vibely > section {

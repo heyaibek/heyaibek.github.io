@@ -7,7 +7,7 @@ export default function Home() {
       <section>
         <h1>Hi there 👋</h1>
         <p>
-          My name is <span className="rainbow">Aibek</span>.
+          My name is <span className="rainbow font-bold">Aibek</span>.
         </p>
         <p>
           I&apos;m an ex-software engineer of{' '}
