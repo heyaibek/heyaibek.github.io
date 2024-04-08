@@ -1,165 +1,95 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-body-rgb: 255, 255, 255;
-  --background-code-rgb: 240, 240, 240;
-  --social-instagram: #e1306c;
-  --social-tiktok: #24292e;
-  --social-github: #000000;
-  --social-spotify: #1db954;
-  --social-apple: #000000;
-  --social-youtube: #ff0000;
+	--text-rgb: 22, 24, 25;
+	--background-body-rgb: 255, 255, 255;
+	--background-code-rgb: 240, 240, 240;
+	--social-instagram: #e1306c;
+	--social-tiktok: #24292e;
+	--social-github: #000000;
+	--social-spotify: #1db954;
+	--social-apple: #000000;
+	--social-youtube: #ff0000;
+	--size-container: 700px;
+	--size-nav: 80px;
+	--size-footer: 80px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-body-rgb: 0, 0, 0;
-    --background-code-rgb: 31, 31, 31;
-    --social-instagram: #e1306c;
-    --social-tiktok: #ffffff;
-    --social-github: #ffffff;
-    --social-spotify: #1db954;
-    --social-apple: #ffffff;
-    --social-youtube: #ff0000;
-  }
+	:root {
+		--text-rgb: 255, 255, 255;
+		--background-body-rgb: 22, 24, 25;
+		--background-code-rgb: 31, 31, 31;
+		--social-instagram: #e1306c;
+		--social-tiktok: #ffffff;
+		--social-github: #ffffff;
+		--social-spotify: #1db954;
+		--social-apple: #ffffff;
+		--social-youtube: #ff0000;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-body-rgb));
+	color: rgb(var(--text-rgb));
+	background: rgb(var(--background-body-rgb));
+	font-family: "Inter", sans-serif;
+	font-style: normal;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-code {
-  @apply mb-6;
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lora", serif;
+	font-style: normal;
 }
 
-code {
-  @apply block;
-  @apply p-4;
-  background: rgb(var(--background-code-rgb));
-}
-
-h1 {
-  @apply text-4xl;
-  @apply font-bold;
-}
-
-h2 {
-  @apply text-3xl;
-  @apply font-bold;
-}
-
-h3 {
-  @apply text-2xl;
-  @apply font-bold;
-}
-
-h4 {
-  @apply text-xl;
-  @apply font-bold;
-}
-
-h5 {
-  @apply text-lg;
-  @apply font-bold;
-}
-
-h6 {
-  @apply text-base;
-  @apply font-bold;
-}
-
-ul {
-  @apply list-disc;
-}
-
-ol {
-  @apply list-decimal;
-}
-
-ul,
-ol {
-  @apply list-inside;
-}
-
-ul > li,
-ol > li {
-  @apply mb-3;
-}
-
-a {
-  @apply text-yellow-400;
-}
-
-.vibely > section {
-  @apply mb-6;
-}
-
-.vibely > .links > *:not(:last-child):after {
-  content: '·';
-  @apply ml-2;
-}
-
-.vibely > .links {
-}
-
-.vibely .social > *:not(:last-child),
-.brakata .social > *:not(:last-child) {
-  @apply mr-6;
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 2rem;
 }
 
 .fa-instagram {
-  color: var(--social-instagram);
+	color: var(--social-instagram);
 }
 
 .fa-tiktok {
-  color: var(--social-tiktok);
+	color: var(--social-tiktok);
 }
 
 .fa-github {
-  color: var(--social-github);
+	color: var(--social-github);
 }
 
 .fa-spotify {
-  color: var(--social-spotify);
+	color: var(--social-spotify);
 }
 
 .fa-apple {
-  color: var(--social-apple);
+	color: var(--social-apple);
 }
 
 .fa-youtube {
-  color: var(--social-youtube);
+	color: var(--social-youtube);
 }
 
 .rainbow {
-  background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-animation 3s ease-in-out infinite;
-  background-size: 400% 100%;
+	background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow-animation 3s ease-in-out infinite;
+	background-size: 400% 100%;
 }
 
 @keyframes rainbow-animation {
-  0%,
-  100% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 100% 0;
+	}
 }

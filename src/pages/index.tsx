@@ -1,16 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getSortedPostsData } from '@/lib/posts';
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <div className="container mx-auto">
       <section>
         <h1>Hi there 👋</h1>
         <p>
-          My name is <span className="rainbow font-bold">Aibek</span>.
-        </p>
-        <p>
-          I&apos;m an ex-software engineer of{' '}
+          My name is Aibek. I&apos;m an ex-software engineer of{' '}
           <a href="https://spotify.com/" target="_blank" rel="noopener noreferrer">
             Spotify
           </a>{' '}
@@ -40,24 +38,20 @@ export default function Home() {
           width="100%"
           height="380"
           frameBorder="0"
-          allowFullScreen=""
+          allowFullScreen={false}
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        />
-      </section>
-      <section className="mb-6">
-        <h2>Follow me on Twitter 👨🏻‍💻</h2>
-        <iframe
-          style={{ border: 'none' }}
-          frameBorder="0"
-          allowFullScreen=""
-          width="100%"
-          height="600"
-          data-tweet-url="https://twitter.com/heyaibek"
-          src="data:text/html;charset=utf-8,%3Ca%20class%3D%22twitter-timeline%22%20href%3D%22https%3A//twitter.com/heyaibek%3Fref_src%3Dtwsrc%255Etfw%22%3ETweets%20by%20heyaibek%3C/a%3E%0A%3Cscript%20async%20src%3D%22https%3A//platform.twitter.com/widgets.js%22%20charset%3D%22utf-8%22%3E%3C/script%3E%0A"
           loading="lazy"
         />
       </section>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
