@@ -1,6 +1,9 @@
+import { VibelyLinks } from '@/components';
+
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
+      <VibelyLinks />
       <h2>Vibely&apos;s Cookie Policy</h2>
       <p>
         We use cookies to help improve your experience of our website at{' '}

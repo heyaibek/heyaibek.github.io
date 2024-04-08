@@ -1,6 +1,9 @@
+import { VibelyLinks } from '@/components';
+
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
+      <VibelyLinks />
       <h2>Vibely&apos;s Privacy Policy</h2>
       <p>
         Your privacy is important to us. It is Aibek Mazhitov&#39;s policy to respect your privacy

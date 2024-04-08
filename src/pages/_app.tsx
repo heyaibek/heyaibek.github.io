@@ -7,7 +7,7 @@ import { AppProps } from 'next/app';
 const Main = styled.main`
   max-width: var(--size-container);
   width: 100%;
-  margin: 0 auto;
+  padding: 1rem;
 `;
 
 const Nav = styled.nav`
@@ -15,7 +15,7 @@ const Nav = styled.nav`
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  height: var(--size-nav);
+	margin-bottom: 1rem;
 `;
 
 const NavLink = styled(Link)<{ isActive: boolean }>`
@@ -24,10 +24,14 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 `;
 
 const Footer = styled.footer`
-  height: var(--size-footer);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1rem;
+  
+  & a {
+    text-decoration: none;
+  }
 `;
 
 export default function App({ Component, pageProps }: AppProps) {

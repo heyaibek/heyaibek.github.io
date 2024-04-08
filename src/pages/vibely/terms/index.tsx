@@ -1,6 +1,9 @@
+import { VibelyLinks } from '@/components';
+
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
+      <VibelyLinks />
       <h2>Vibely&apos;s Terms of Service</h2>
       <p>
         These Terms of Service govern your use of Vibely (ChkSnd), our website located at{' '}

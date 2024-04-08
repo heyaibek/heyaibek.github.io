@@ -1,5 +1,6 @@
 :root {
 	--text-rgb: 22, 24, 25;
+	--accent-rgb: 58, 139, 168;
 	--background-body-rgb: 255, 255, 255;
 	--background-code-rgb: 240, 240, 240;
 	--social-instagram: #e1306c;
@@ -9,8 +10,6 @@
 	--social-apple: #000000;
 	--social-youtube: #ff0000;
 	--size-container: 700px;
-	--size-nav: 80px;
-	--size-footer: 80px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,8 +46,30 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-	margin-bottom: 2rem;
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin-bottom: 1rem;
+}
+
+code {
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+
+ul, ol {
+	margin-left: 1rem;
+}
+
+a {
+	color: rgb(var(--accent-rgb));
+}
+
+code {
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+
+.mb {
+	margin-bottom: 1rem;
 }
 
 .fa-instagram {

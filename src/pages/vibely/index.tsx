@@ -1,25 +1,19 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { VibelyLinks } from '@/components';
 import styled from 'styled-components';
 
-const Links = styled.nav`
+const Social = styled.section`
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 1rem;
 `;
 
 export default function Home() {
   return (
     <div>
-      <Links>
-        <Link href="/vibely/">Home</Link>
-        <Link href="/vibely/privacy">Privacy</Link>
-        <Link href="/vibely/terms">Terms</Link>
-        <Link href="/vibely/cookies">Cookies</Link>
-        <Link href="/vibely/open-source">Libraries</Link>
-      </Links>
-      <h4 className="lowercase text-base font-light m-0">Music visualization made easy</h4>
-      <section>
+      <VibelyLinks />
+      <h2>Music visualization made easy</h2>
+      <section className="mb">
         <video
           muted
           loop
@@ -29,8 +23,8 @@ export default function Home() {
           <source src="/promo-video-ios.webm" type="video/webm" />
         </video>
       </section>
-      <section className="text-center">
-        <h2 className="rainbow">Download</h2>
+      <section className="mb">
+        <h2>Download</h2>
         <div className="app-badges flex items-center" id="download">
           <a
             href="https://apps.apple.com/app/id1528056717"
@@ -40,7 +34,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="social">
+      <Social>
         <a href="https://instagram.com/vibely.app" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram fa-xl" />
         </a>
@@ -50,7 +44,7 @@ export default function Home() {
         <a href="https://github.com/chksnd" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github fa-xl" />
         </a>
-      </section>
+      </Social>
     </div>
   );
 }

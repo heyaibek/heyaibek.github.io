@@ -4,7 +4,7 @@ import { getSortedPostsData } from '@/lib/posts';
 
 export default function Home({ allPostsData }) {
   return (
-    <div className="container mx-auto">
+    <div>
       <section>
         <h1>Hi there 👋</h1>
         <p>
@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
           <Link href="/brakata">Brakata</Link> and publish them on streaming services.
         </p>
       </section>
-      <section className="mb-6">
+      <section className="mb">
         <h2>My Apps 📱</h2>
         <Link href="/vibely">
           <Image
@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
           />
         </Link>
       </section>
-      <section className="mb-6">
+      <section className="mb">
         <h2>My Music 🎧</h2>
         <iframe
           title="Brakata Tracks"

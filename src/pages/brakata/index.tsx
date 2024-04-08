@@ -1,3 +1,11 @@
+import styled from 'styled-components';
+
+const Social = styled.section`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+`;
+
 export default function Home() {
   return (
     <div className="brakata container mx-auto">
@@ -11,11 +19,11 @@ export default function Home() {
         allowFullScreen={false}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
-        className="mb-6"
+        className="mb"
       />
       <section className="text-center">
         <h3>Follow Brakata</h3>
-        <div className="social">
+        <Social>
           <a
             href="https://open.spotify.com/artist/2wQZi1X99quj4L7VUuChnu"
             target="_blank"
@@ -34,7 +42,7 @@ export default function Home() {
             rel="noopener noreferrer">
             <i className="fab fa-youtube fa-xl" />
           </a>
-        </div>
+        </Social>
       </section>
     </div>
   );

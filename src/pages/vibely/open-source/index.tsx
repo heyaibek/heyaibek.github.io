@@ -1,6 +1,9 @@
+import { VibelyLinks } from '@/components';
+
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
+      <VibelyLinks />
       <h2>Open Source Libraries</h2>
       <p>
         The following sets forth attribution notices for open source software that may be contained
