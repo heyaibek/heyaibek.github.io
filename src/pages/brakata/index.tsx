@@ -7,8 +7,8 @@ export default function Home() {
         src="https://open.spotify.com/embed/playlist/25O54nArGPTdhD5j8HapHw?utm_source=generator&theme=0"
         width="100%"
         height="500"
-        frameBorder="0"
-        allowFullScreen=""
+        frameBorder={0}
+        allowFullScreen={false}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
         className="mb-6"
