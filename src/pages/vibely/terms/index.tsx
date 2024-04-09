@@ -1,9 +1,9 @@
-import { VibelyLinks } from '@/components';
+import { Document, VibelyLinks } from '@/components';
 import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div>
+    <Document>
       <Head>
         <title>Terms of Service - Vibely</title>
       </Head>
@@ -193,6 +193,6 @@ export default function Home() {
         You irrevocably submit to the exclusive jurisdiction of the courts in that State or
         location.{' '}
       </p>
-    </div>
+    </Document>
   );
 }

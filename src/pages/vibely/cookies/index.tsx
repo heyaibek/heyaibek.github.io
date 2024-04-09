@@ -1,9 +1,9 @@
-import { VibelyLinks } from '@/components';
+import { Document, VibelyLinks } from '@/components';
 import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div>
+    <Document>
       <Head>
         <title>Cookie Policy - Vibely</title>
       </Head>
@@ -82,6 +82,6 @@ export default function Home() {
         websites that use the same third-party service.{' '}
       </p>
       <p>We use targeting/advertising cookies on our site. </p>
-    </div>
+    </Document>
   );
 }

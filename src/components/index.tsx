@@ -22,4 +22,8 @@ function VibelyLinks() {
   );
 }
 
-export { VibelyLinks };
+const Document = styled.div`
+  text-align: justify;
+`;
+
+export { VibelyLinks, Document };

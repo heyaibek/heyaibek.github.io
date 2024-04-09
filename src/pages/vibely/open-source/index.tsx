@@ -1,9 +1,9 @@
-import { VibelyLinks } from '@/components';
+import { Document, VibelyLinks } from '@/components';
 import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div>
+    <Document>
       <Head>
         <title>Open Source Libraries - Vibely</title>
       </Head>
@@ -118,6 +118,6 @@ export default function Home() {
         OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
         DEALINGS IN THE SOFTWARE.
       </code>
-    </div>
+    </Document>
   );
 }

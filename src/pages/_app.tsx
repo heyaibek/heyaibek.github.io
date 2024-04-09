@@ -8,6 +8,7 @@ const Main = styled.main`
   max-width: var(--size-container);
   width: 100%;
   padding: 1rem;
+  margin: 0 auto;
 `;
 
 const Nav = styled.nav`
