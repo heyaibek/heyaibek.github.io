@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Social = styled.section`
   display: flex;
@@ -9,6 +10,9 @@ const Social = styled.section`
 export default function Home() {
   return (
     <div className="brakata container mx-auto">
+      <Head>
+        <title>Brakata Music</title>
+      </Head>
       <iframe
         title="Brakata Tracks"
         style={{ borderRadius: 12 }}

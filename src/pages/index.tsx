@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
+import Head from 'next/head';
 
 export default function Home({ allPostsData }) {
   return (
     <div>
+      <Head>
+        <title>@heyaibek</title>
+      </Head>
       <section>
         <h1>Hi there 👋</h1>
         <p>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { VibelyLinks } from '@/components';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Social = styled.section`
   display: flex;
@@ -11,6 +12,9 @@ const Social = styled.section`
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Vibely Visualizer for iOS</title>
+      </Head>
       <VibelyLinks />
       <h2>Music visualization made easy</h2>
       <section className="mb">

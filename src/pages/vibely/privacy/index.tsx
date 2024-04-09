@@ -1,8 +1,12 @@
 import { VibelyLinks } from '@/components';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Privacy Policy - Vibely</title>
+      </Head>
       <VibelyLinks />
       <h2>Vibely&apos;s Privacy Policy</h2>
       <p>
