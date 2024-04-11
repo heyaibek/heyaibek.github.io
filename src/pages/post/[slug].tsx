@@ -3,6 +3,7 @@
 import { GetStaticPaths } from 'next';
 import { getSortedPostsData } from '@/lib/posts';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const Metadata = styled.div`
   color: rgba(var(--text-rgb), 0.5);
@@ -13,6 +14,9 @@ const Metadata = styled.div`
 export default function Post({ post }) {
   return (
     <div>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
       <h1>{post.title}</h1>
       <Metadata>
         <div>Date: {post.date}</div>
