@@ -13,6 +13,7 @@ const Main = styled.main`
   
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   & > .spacer {
     flex: 1;
@@ -20,12 +21,16 @@ const Main = styled.main`
 `;
 
 const Nav = styled.nav`
+  background: rgba(var(--text-rgb), 0.05);
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem 0;
+  border-radius: 0.5rem;
 `;
 
 const NavLink = styled(Link)<{ isActive: boolean }>`
@@ -34,8 +39,9 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 `;
 
 const Footer = styled.footer`
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 1rem 0;
   gap: 10px;
@@ -44,14 +50,17 @@ const Footer = styled.footer`
     text-decoration: none;
   }
   
-  & > .spacer {
-    flex: 1;
+  &:before {
+    content: '•';
+    font-size: 0.5rem;
+    display: block;
   }
+`;
 
-	@media screen and (max-width: 600px) {
-		flex-direction: column;
-    gap: 5px;
-	}
+const FooterLinks = styled.div`
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 `;
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -91,11 +100,12 @@ export default function App({ Component, pageProps }: AppProps) {
             &lt;/&gt; by @heyaibek
           </span>
         </Link>
-        <div className="spacer" />
-        <Link href="/privacy">Privacy</Link>
-        <Link href="/terms">Terms</Link>
-        <Link href="/cookies">Cookies</Link>
-        <Link href="/imprint">Imprint</Link>
+        <FooterLinks>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/cookies">Cookies</Link>
+          <Link href="/imprint">Imprint</Link>
+        </FooterLinks>
         <span>&copy; {new Date().getFullYear()}</span>
       </Footer>
     </Main>

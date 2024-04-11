@@ -4,12 +4,19 @@ import Head from 'next/head';
 const Social = styled.section`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
+`;
+
+const Container = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
 export default function Home() {
   return (
-    <div className="brakata container mx-auto">
+    <Container>
       <Head>
         <title>Brakata Music</title>
       </Head>
@@ -48,6 +55,6 @@ export default function Home() {
           </a>
         </Social>
       </section>
-    </div>
+    </Container>
   );
 }

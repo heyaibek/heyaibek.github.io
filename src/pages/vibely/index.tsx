@@ -5,16 +5,22 @@ import Head from 'next/head';
 const Social = styled.section`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1rem;
+`;
+
+const Container = styled.div`
+  text-align: center;
 `;
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Head>
         <title>Vibely Visualizer for iOS</title>
       </Head>
-      <h2>Music visualization made easy</h2>
+      <h2>Vibely</h2>
+      <p>Vibely enables creators to visualize & share music</p>
       <section className="mb">
         <video
           muted
@@ -47,6 +53,6 @@ export default function Home() {
           <i className="fab fa-github fa-xl" />
         </a>
       </Social>
-    </div>
+    </Container>
   );
 }
