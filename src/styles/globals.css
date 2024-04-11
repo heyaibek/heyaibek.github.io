@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr, address {
 	margin-bottom: 1rem;
 }
 

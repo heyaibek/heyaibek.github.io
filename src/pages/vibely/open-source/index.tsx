@@ -1,13 +1,11 @@
-import { Document, VibelyLinks } from '@/components';
 import Head from 'next/head';
 
 export default function Home() {
   return (
-    <Document>
+    <div>
       <Head>
         <title>Open Source Libraries - Vibely</title>
       </Head>
-      <VibelyLinks />
       <h2>Open Source Libraries</h2>
       <p>
         The following sets forth attribution notices for open source software that may be contained
@@ -144,6 +142,6 @@ export default function Home() {
         OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
         DEALINGS IN THE SOFTWARE.
       </code>
-    </Document>
+    </div>
   );
 }

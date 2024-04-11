@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { VibelyLinks } from '@/components';
 import styled from 'styled-components';
 import Head from 'next/head';
 
@@ -15,7 +14,6 @@ export default function Home() {
       <Head>
         <title>Vibely Visualizer for iOS</title>
       </Head>
-      <VibelyLinks />
       <h2>Music visualization made easy</h2>
       <section className="mb">
         <video
@@ -23,7 +21,7 @@ export default function Home() {
           loop
           autoPlay
           poster="/promo-placeholder-ios.png"
-          style={{ width: '100%', maxWidth: 300, borderRadius: 8 }}>
+          style={{ width: '100%', maxWidth: 200, borderRadius: 8 }}>
           <source src="/promo-video-ios.webm" type="video/webm" />
         </video>
       </section>
