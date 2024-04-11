@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 import Head from 'next/head';
 
-export default function Home({ allPostsData }) {
+export default function Home({ posts }) {
   return (
     <div>
       <Head>
@@ -20,6 +20,12 @@ export default function Home({ allPostsData }) {
           with an audio visualization. I also produce electronic music as{' '}
           <Link href="/brakata">Brakata</Link> and publish them on streaming services.
         </p>
+      </section>
+      <section className="mb">
+        <h1>Blog</h1>
+        {posts.map(({ id, date, title }) => (
+          <li key={id}><span>{date}</span> → <Link href={`/post/${id}`}>{title}</Link></li>
+        ))}
       </section>
       <section className="mb">
         <h2>My Apps 📱</h2>
@@ -52,10 +58,9 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      posts: await getSortedPostsData(),
     },
   };
 }
