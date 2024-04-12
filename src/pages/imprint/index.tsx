@@ -21,7 +21,7 @@ export default function Home() {
       <address>
         Email: heyaibek [at] gmail [dot] com
         <br />
-        Telefon: +49 174 303 6976
+        Telefon: n/a
         <br />
         Fax: n/a
         <br />
