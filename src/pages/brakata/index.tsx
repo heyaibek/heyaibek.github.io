@@ -33,7 +33,7 @@ export default function Home() {
         className="mb"
       />
       <section className="text-center">
-        <h3>Follow Brakata</h3>
+        <h1>Follow Brakata</h1>
         <Social>
           <a
             href="https://open.spotify.com/artist/2wQZi1X99quj4L7VUuChnu"

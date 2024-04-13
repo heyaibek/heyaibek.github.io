@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { Divider } from '@/components';
 
 const Social = styled.section`
   display: flex;
@@ -19,7 +20,7 @@ export default function Home() {
       <Head>
         <title>Vibely Visualizer for iOS</title>
       </Head>
-      <h2>Vibely</h2>
+      <h1>Vibely</h1>
       <p>Vibely enables creators to visualize & share music</p>
       <section className="mb">
         <video
@@ -32,7 +33,7 @@ export default function Home() {
         </video>
       </section>
       <section className="mb">
-        <h2>Download</h2>
+        <h1>Download</h1>
         <div className="app-badges flex items-center" id="download">
           <a
             href="https://apps.apple.com/app/id1528056717"
@@ -42,17 +43,21 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <Social>
-        <a href="https://instagram.com/vibely.app" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-instagram fa-xl" />
-        </a>
-        <a href="https://tiktok.com/@vibely.app" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-tiktok fa-xl" />
-        </a>
-        <a href="https://github.com/chksnd" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github fa-xl" />
-        </a>
-      </Social>
+      <Divider />
+      <section className="mb">
+        <h1>Follow Us</h1>
+        <Social>
+          <a href="https://instagram.com/vibely.app" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram fa-xl" />
+          </a>
+          <a href="https://tiktok.com/@vibely.app" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-tiktok fa-xl" />
+          </a>
+          <a href="https://github.com/chksnd" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github fa-xl" />
+          </a>
+        </Social>
+      </section>
     </Container>
   );
 }

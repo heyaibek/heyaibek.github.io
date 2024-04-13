@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 import Head from 'next/head';
+import { Divider } from '@/components';
 
 export default function Home({ posts }) {
   return (
@@ -21,12 +22,16 @@ export default function Home({ posts }) {
           <Link href="/brakata">Brakata</Link> and publish them on streaming services.
         </p>
       </section>
+      <Divider />
       <section className="mb">
         <h1>Blog</h1>
         {posts.map(({ id, date, title }) => (
-          <li key={id}><span>{date}</span> → <Link href={`/post/${id}`}>{title}</Link></li>
+          <li key={id}>
+            <span>{date}</span> → <Link href={`/post/${id}`}>{title}</Link>
+          </li>
         ))}
       </section>
+      <Divider />
       <section className="mb">
         <h2>My Apps 📱</h2>
         <Link href="/vibely">
@@ -39,8 +44,9 @@ export default function Home({ posts }) {
           />
         </Link>
       </section>
+      <Divider />
       <section className="mb">
-        <h2>My Music 🎧</h2>
+        <h1>My Music 🎧</h1>
         <iframe
           title="Brakata Tracks"
           style={{ borderRadius: 12 }}

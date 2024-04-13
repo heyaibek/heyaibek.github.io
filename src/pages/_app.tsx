@@ -25,6 +25,7 @@ const Nav = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: row;
+	flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -36,6 +37,12 @@ const Nav = styled.nav`
 const NavLink = styled(Link)<{ isActive: boolean }>`
   color: rgba(var(--text-rgb), ${(props) => (props.isActive ? 1.0 : 0.5)});
   text-decoration: none;
+  display: flex;
+  gap: 5px;
+  
+  &:hover {
+    color: rgba(var(--text-rgb), 1.0);
+  }
 `;
 
 const Footer = styled.footer`
@@ -51,7 +58,7 @@ const Footer = styled.footer`
   }
   
   &:before {
-    content: '•';
+    content: '-';
     font-size: 0.5rem;
     display: block;
   }
@@ -69,36 +76,49 @@ export default function App({ Component, pageProps }: AppProps) {
     <Main>
       <Nav>
         <NavLink href="/" isActive={pathname === '/'}>
-          @heyaibek
+          <span role="img" aria-label="love you gesture">
+            🤟🏻
+          </span>
+          <span>@heyaibek</span>
         </NavLink>
         <NavLink href="/vibely" isActive={pathname.indexOf('/vibely') > -1}>
-          Vibely
+          <span role="img" aria-label="mobile phone">
+            📱
+          </span>
+          <span>Vibely</span>
         </NavLink>
         <NavLink href="/brakata" isActive={pathname.indexOf('/brakata') > -1}>
-          Brakata
+          <span role="img" aria-label="musical keyboard">
+            🎹
+          </span>
+          <span>Brakata</span>
         </NavLink>
         <NavLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/heyaibek/"
           isActive={false}>
-          Github
+          <span role="img" aria-label="man technologist">
+            👨🏻‍💻
+          </span>
+          <span>Github</span>
         </NavLink>
         <NavLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://linkedin.com/in/heyaibek/"
           isActive={false}>
-          LinkedIn
+          <span role="img" aria-label="briefcase">
+            💼
+          </span>
+          <span>LinkedIn</span>
         </NavLink>
       </Nav>
       <Component {...pageProps} />
-      <div className='spacer' />
+      <div className="spacer" />
       <Footer>
         <Link href="/">
-          <span className="rainbow font-semibold text-xs font-mono">
-            &lt;/&gt; by @heyaibek
-          </span>
+          <span className="rainbow font-semibold text-xs font-mono">&lt;/&gt; by @heyaibek</span>
         </Link>
         <FooterLinks>
           <Link href="/privacy">Privacy</Link>
