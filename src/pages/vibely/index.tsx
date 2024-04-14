@@ -27,9 +27,9 @@ export default function Home() {
           muted
           loop
           autoPlay
-          poster="/promo-placeholder-ios.png"
+          poster="/vibely-preview-placeholder.jpg"
           style={{ width: '100%', maxWidth: 200, borderRadius: 8 }}>
-          <source src="/promo-video-ios.webm" type="video/webm" />
+          <source src="/vibely-preview-video.webm" type="video/webm" />
         </video>
       </section>
       <section className="mb">
