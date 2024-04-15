@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import { Divider } from '@/components';
 import Link from 'next/link';
-import { countryFlags, generateStars, ratings } from './utils';
+import { countryFlags, generateStars, ratings } from '@/lib/vibely-utils';
 
 const Social = styled.section`
   display: flex;
