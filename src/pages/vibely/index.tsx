@@ -117,9 +117,6 @@ export default function Home() {
           <a href="https://tiktok.com/@vibely.app" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-tiktok fa-xl" />
           </a>
-          <a href="https://github.com/chksnd" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github fa-xl" />
-          </a>
         </Social>
       </section>
     </Container>
