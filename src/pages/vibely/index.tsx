@@ -69,9 +69,13 @@ export default function Home() {
           muted
           loop
           autoPlay
+          playsInline
           poster="/vibely-preview-placeholder.jpg"
-          style={{ width: '100%', maxWidth: 200, borderRadius: 8 }}>
+          style={{ width: '100%', maxWidth: 200, borderRadius: 8 }}
+          preload='none'
+        >
           <source src="/vibely-preview-video.webm" type="video/webm" />
+          <source src="/vibely-preview-video.mp4" type="video/mp4" />
         </video>
       </section>
       <section className="mb">
