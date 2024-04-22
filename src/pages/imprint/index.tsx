@@ -15,17 +15,19 @@ export default function Home() {
         <br />
         Wittenberger Str. 37
         <br />
-        04129 Leipzig, Deutschland
+        04129 Leipzig
+        <br />
+        Deutschland
       </address>
       <h3>Kontakt:</h3>
       <address>
         Email: heyaibek [at] gmail [dot] com
         <br />
-        Telefon: n/a
+        Telefon: +49 1525 7276876
         <br />
         Fax: n/a
         <br />
-        Web: <Link href="/">heyaibek.github.io</Link>
+        Web: <Link href="/">https://heyaibek.github.io</Link>
       </address>
       <h3>Legal:</h3>
       <address>Umsatzsteuer-ID gem. §27a UStG: DE 366980568</address>
