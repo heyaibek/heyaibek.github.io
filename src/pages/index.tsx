@@ -3,6 +3,24 @@ import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 import Head from 'next/head';
 import { Divider } from '@/components';
+import styled from 'styled-components';
+
+const Projects = styled.div`
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1rem;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+	@media screen and (max-width: 700px) {
+		grid-template-columns: 1fr;
+	}
+`;
 
 export default function Home({ posts }) {
   return (
@@ -33,16 +51,29 @@ export default function Home({ posts }) {
       </section>
       <Divider />
       <section className="mb">
-        <h2>My Apps 📱</h2>
-        <Link href="/vibely">
-          <Image
-            className="rounded-[32px]"
-            src="/vibely.png"
-            width={200}
-            height={200}
-            alt="Vibely Logo"
-          />
-        </Link>
+        <h2>My Projects 📱</h2>
+        <Projects>
+          <Link href="/vibely">
+            <Image
+              className="rounded-32"
+              src="/vibely.png"
+              width={150}
+              height={150}
+              alt="Vibely Logo"
+            />
+            <h3>Vibely - Music Visualizer</h3>
+          </Link>
+          <Link href="https://github.com/heyaibek/spotify-picker-ios" target="_blank" rel="noopener noreferrer">
+            <Image
+              className="rounded-32"
+              src="/spotify-picker-ios-icon.png"
+              width={150}
+              height={150}
+              alt="Spotify Picker for iOS"
+            />
+            <h3>Spotify Picker for iOS</h3>
+          </Link>
+        </Projects>
       </section>
       <Divider />
       <section className="mb">
