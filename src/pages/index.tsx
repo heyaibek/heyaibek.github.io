@@ -6,9 +6,9 @@ import { Divider } from '@/components';
 import styled from 'styled-components';
 
 const Projects = styled.div`
-	display: grid;
-	grid-template-columns: auto auto;
-	gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
 
   & > * {
     display: flex;
@@ -17,9 +17,9 @@ const Projects = styled.div`
     gap: 1rem;
   }
 
-	@media screen and (max-width: 700px) {
-		grid-template-columns: 1fr;
-	}
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export default function Home({ posts }) {
@@ -63,7 +63,11 @@ export default function Home({ posts }) {
             />
             <h3>Vibely - Music Visualizer</h3>
           </Link>
-          <Link href="https://github.com/heyaibek/spotify-picker-ios" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://github.com/heyaibek/spotify-picker-ios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="rounded-32"
               src="/spotify-picker-ios-icon.png"

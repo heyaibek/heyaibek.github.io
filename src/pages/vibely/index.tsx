@@ -43,9 +43,9 @@ const Ratings = styled.div`
     }
   }
 
-	@media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
-	}
+  }
 `;
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
           playsInline
           poster="/vibely-preview-placeholder.jpg"
           style={{ width: '100%', maxWidth: 200, borderRadius: 8 }}
-          preload='none'
+          preload="none"
         >
           <source src="/vibely-preview-video.webm" type="video/webm" />
           <source src="/vibely-preview-video.mp4" type="video/mp4" />
@@ -84,7 +84,8 @@ export default function Home() {
           <a
             href="https://apps.apple.com/app/id1528056717"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <Image className="ios" src="/app-badge-ios.png" alt="iOS" width={140} height={50} />
           </a>
         </div>

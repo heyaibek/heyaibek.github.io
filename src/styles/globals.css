@@ -1,128 +1,148 @@
 :root {
-	--text-rgb: 22, 24, 25;
-	--accent-rgb: 58, 139, 168;
-	--rating-rgb: 255, 149, 0;
-	--background-body-rgb: 255, 255, 255;
-	--background-code-rgb: 240, 240, 240;
-	--social-instagram: #e1306c;
-	--social-tiktok: #24292e;
-	--social-github: #000000;
-	--social-spotify: #1db954;
-	--social-apple: #000000;
-	--social-youtube: #ff0000;
-	--size-container: 700px;
+  --text-rgb: 22, 24, 25;
+  --accent-rgb: 58, 139, 168;
+  --rating-rgb: 255, 149, 0;
+  --background-body-rgb: 255, 255, 255;
+  --background-code-rgb: 240, 240, 240;
+  --social-instagram: #e1306c;
+  --social-tiktok: #24292e;
+  --social-github: #000000;
+  --social-spotify: #1db954;
+  --social-apple: #000000;
+  --social-youtube: #ff0000;
+  --size-container: 700px;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--text-rgb: 255, 255, 255;
-		--background-body-rgb: 22, 24, 25;
-		--background-code-rgb: 31, 31, 31;
-		--social-instagram: #e1306c;
-		--social-tiktok: #ffffff;
-		--social-github: #ffffff;
-		--social-spotify: #1db954;
-		--social-apple: #ffffff;
-		--social-youtube: #ff0000;
-	}
+  :root {
+    --text-rgb: 255, 255, 255;
+    --background-body-rgb: 22, 24, 25;
+    --background-code-rgb: 31, 31, 31;
+    --social-instagram: #e1306c;
+    --social-tiktok: #ffffff;
+    --social-github: #ffffff;
+    --social-spotify: #1db954;
+    --social-apple: #ffffff;
+    --social-youtube: #ff0000;
+  }
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	color: rgb(var(--text-rgb));
-	background: rgb(var(--background-body-rgb));
-	font-family: "Inter", sans-serif;
-	font-style: normal;
-	font-size: 1rem;
-	line-height: 1.5rem;
+  color: rgb(var(--text-rgb));
+  background: rgb(var(--background-body-rgb));
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Lora", serif;
-	font-style: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lora', serif;
+  font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, hr, address {
-	margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+hr,
+address {
+  margin-bottom: 1rem;
 }
 
 code {
-	display: inline-block;
-	margin-bottom: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
-ul, ol {
-	margin-left: 1rem;
+ul,
+ol {
+  margin-left: 1rem;
 }
 
 a {
-	color: rgb(var(--accent-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 code {
-	font-size: 0.75rem;
-	line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 hr {
-	border-color: rgba(var(--text-rgb), 0.16);
-	border-width: 0.5px;
+  border-color: rgba(var(--text-rgb), 0.16);
+  border-width: 0.5px;
+}
+
+img {
+  max-width: calc(var(--size-container) - 2rem);
 }
 
 .mb {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .fa-instagram {
-	color: var(--social-instagram);
+  color: var(--social-instagram);
 }
 
 .fa-tiktok {
-	color: var(--social-tiktok);
+  color: var(--social-tiktok);
 }
 
 .fa-github {
-	color: var(--social-github);
+  color: var(--social-github);
 }
 
 .fa-spotify {
-	color: var(--social-spotify);
+  color: var(--social-spotify);
 }
 
 .fa-apple {
-	color: var(--social-apple);
+  color: var(--social-apple);
 }
 
 .fa-youtube {
-	color: var(--social-youtube);
+  color: var(--social-youtube);
 }
 
 .rounded-32 {
-	border-radius: 32px;
+  border-radius: 32px;
 }
 
 .rainbow {
-	background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: rainbow-animation 3s ease-in-out infinite;
-	background-size: 400% 100%;
+  background: linear-gradient(to right, #6666ff, #0099ff, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 3s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 @keyframes rainbow-animation {
-	0%,
-	100% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 100% 0;
-	}
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 @media screen and (max-width: 700px) {

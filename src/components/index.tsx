@@ -1,5 +1,3 @@
 import Divider from './Divider';
 
-export {
-  Divider,
-}
+export { Divider };

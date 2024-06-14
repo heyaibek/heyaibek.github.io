@@ -10,7 +10,7 @@ const Main = styled.main`
   width: 100%;
   padding: 1rem;
   margin: 0 auto;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ const Nav = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: row;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -39,9 +39,9 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
   text-decoration: none;
   display: flex;
   gap: 5px;
-  
+
   &:hover {
-    color: rgba(var(--text-rgb), 1.0);
+    color: rgba(var(--text-rgb), 1);
   }
 `;
 
@@ -56,7 +56,7 @@ const Footer = styled.footer`
   & a {
     text-decoration: none;
   }
-  
+
   &:before {
     content: '-';
     font-size: 0.5rem;
@@ -65,9 +65,9 @@ const Footer = styled.footer`
 `;
 
 const FooterLinks = styled.div`
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 `;
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -97,7 +97,8 @@ export default function App({ Component, pageProps }: AppProps) {
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/heyaibek/"
-          isActive={false}>
+          isActive={false}
+        >
           <span role="img" aria-label="man technologist">
             👨🏻‍💻
           </span>
@@ -107,7 +108,8 @@ export default function App({ Component, pageProps }: AppProps) {
           target="_blank"
           rel="noopener noreferrer"
           href="https://linkedin.com/in/heyaibek/"
-          isActive={false}>
+          isActive={false}
+        >
           <span role="img" aria-label="briefcase">
             💼
           </span>

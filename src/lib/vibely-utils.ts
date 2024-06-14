@@ -1,4 +1,3 @@
-
 export function generateStars(value: number): string {
   let result: Array<string> = [];
   for (let i = 1; i <= value; i++) {

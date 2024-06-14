@@ -8,29 +8,29 @@ const postsDirectory = path.join(process.cwd(), '/src/posts');
 
 export async function getSortedPostsData() {
   const filenames = fs.readdirSync(postsDirectory);
-  const posts = await Promise.all(filenames.map(async (filename) => {
-    const id = filename.replace(/\.md$/, '');
+  const posts = await Promise.all(
+    filenames.map(async (filename) => {
+      const id = filename.replace(/\.md$/, '');
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+      // Read markdown file as string
+      const fullPath = path.join(postsDirectory, filename);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+      // Use gray-matter to parse the post metadata section
+      const matterResult = matter(fileContents);
 
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-      .use(html)
-      .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+      // Use remark to convert markdown into HTML string
+      const processedContent = await remark().use(html).process(matterResult.content);
+      const contentHtml = processedContent.toString();
 
-    // Combine the data with the id
-    return {
-      id,
-      ...matterResult.data,
-      content: contentHtml,
-    };
-  }));
+      // Combine the data with the id
+      return {
+        id,
+        ...matterResult.data,
+        content: contentHtml,
+      };
+    })
+  );
 
   // Sort posts by date
   return posts.sort((a, b) => {
