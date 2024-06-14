@@ -50,6 +50,7 @@ h5,
 h6 {
   font-family: 'Lora', serif;
   font-style: normal;
+  line-height: 2.5rem;
 }
 
 h1,
@@ -91,7 +92,7 @@ hr {
 }
 
 img {
-  max-width: calc(var(--size-container) - 2rem);
+  max-width: 100%;
 }
 
 .mb {
