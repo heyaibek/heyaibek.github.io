@@ -6,46 +6,46 @@ import Link from 'next/link';
 import { countryFlags, generateStars, ratings } from '@/lib/vibely-utils';
 
 const Social = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
 `;
 
 const Container = styled.div`
-  text-align: center;
+    text-align: center;
 `;
 
 const News = styled.div`
-  background: rgba(var(--text-rgb), 0.05);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+    background: rgba(var(--text-rgb), 0.05);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 `;
 
 const Ratings = styled.div`
-  text-align: start;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+    text-align: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
 
-  & > * {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    & > * {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-    & > :nth-child(1) > .stars {
-      color: rgba(var(--rating-rgb), 1);
-      margin-right: 0.5rem;
+        & > :nth-child(1) > .stars {
+            color: rgba(var(--rating-rgb), 1);
+            margin-right: 0.5rem;
+        }
+
+        & > :nth-child(2) {
+            font-weight: bold;
+        }
     }
 
-    & > :nth-child(2) {
-      font-weight: bold;
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
     }
-  }
-
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export default function Home() {
@@ -56,6 +56,17 @@ export default function Home() {
       </Head>
       <h1>Vibely</h1>
       <p>Vibely enables creators to visualize & share music</p>
+      <a
+        href="https://www.producthunt.com/posts/vibely-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vibely&#0045;3"
+        target="_blank"
+        style={{ display: 'block', marginBottom: '1rem' }}
+      >
+        <Image
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=463509&theme=light"
+          alt="Product Hunt"
+          width="250" height="54"
+        />
+      </a>
       <News className="mb">
         <Link href="/post/release-notes-v3.0.0">
           A New Era for Vibely v3.0.0{' '}
@@ -78,6 +89,7 @@ export default function Home() {
           <source src="/vibely-preview-video.mp4" type="video/mp4" />
         </video>
       </section>
+
       <section className="mb">
         <h1>Download</h1>
         <div className="app-badges flex items-center" id="download">
