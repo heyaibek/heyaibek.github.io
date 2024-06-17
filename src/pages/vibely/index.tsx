@@ -1,56 +1,11 @@
 import Image from 'next/image';
-import styled from 'styled-components';
 import Head from 'next/head';
-import { Divider } from '@/components';
 import Link from 'next/link';
 import { countryFlags, generateStars, ratings } from '@/lib/vibely-utils';
 
-const Social = styled.section`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-`;
-
-const Container = styled.div`
-    text-align: center;
-`;
-
-const News = styled.div`
-    background: rgba(var(--text-rgb), 0.05);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-`;
-
-const Ratings = styled.div`
-    text-align: start;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-
-    & > * {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        & > :nth-child(1) > .stars {
-            color: rgba(var(--rating-rgb), 1);
-            margin-right: 0.5rem;
-        }
-
-        & > :nth-child(2) {
-            font-weight: bold;
-        }
-    }
-
-    @media screen and (max-width: 700px) {
-        grid-template-columns: 1fr;
-    }
-`;
-
 export default function Home() {
   return (
-    <Container>
+    <div>
       <Head>
         <title>Vibely Visualizer for iOS</title>
       </Head>
@@ -67,14 +22,14 @@ export default function Home() {
           width="250" height="54"
         />
       </a>
-      <News className="mb">
+      <div className="mb">
         <Link href="/post/release-notes-v3.0.0">
           A New Era for Vibely v3.0.0{' '}
           <span role="img" aria-label="shine">
             🌟
           </span>
         </Link>
-      </News>
+      </div>
       <section className="mb">
         <video
           muted
@@ -102,11 +57,10 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <Divider />
       <section className="mb">
         <h1>User Reviews</h1>
         <p>3.4 of 5.0 from 543 ratings</p>
-        <Ratings>
+        <div>
           {ratings.map((r, i) => (
             <div key={i}>
               <span>
@@ -122,20 +76,19 @@ export default function Home() {
               <span>{r.message}</span>
             </div>
           ))}
-        </Ratings>
+        </div>
       </section>
-      <Divider />
       <section className="mb">
         <h1>Follow Us</h1>
-        <Social>
+        <div>
           <a href="https://instagram.com/vibely.app" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram fa-xl" />
           </a>
           <a href="https://tiktok.com/@vibely.app" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-tiktok fa-xl" />
           </a>
-        </Social>
+        </div>
       </section>
-    </Container>
+    </div>
   );
 }

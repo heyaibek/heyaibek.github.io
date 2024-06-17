@@ -1,13 +1,8 @@
 import Link from 'next/link';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  width: 100%;
-`;
 
 export default function Home() {
   return (
-    <Container>
+    <div>
       <h1>Impressum</h1>
       <h3>Angaben gem. §5 TMG:</h3>
       <address>
@@ -31,6 +26,6 @@ export default function Home() {
       </address>
       <h3>Legal:</h3>
       <address>Umsatzsteuer-ID gem. §27a UStG: DE 366980568</address>
-    </Container>
+    </div>
   );
 }
