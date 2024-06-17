@@ -11,7 +11,7 @@ export default function Post({ post }) {
         <title>{post.title}</title>
       </Head>
       <h1>{post.title}</h1>
-      <div>Date: {post.date}</div>
+      <p className="text-gray-500">Date: {post.date}</p>
       <hr />
       <p dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>

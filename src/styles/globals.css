@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body, #__next {
+    @apply h-full;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, hr, img, address, section {
+    @apply mb-5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply italic;
+    @apply text-black;
+}
+
+h1 { @apply text-5xl; }
+h2 { @apply text-4xl; }
+h3 { @apply text-3xl; }
+h4 { @apply text-2xl; }
+h5 { @apply text-xl; }
+h6 { @apply text-base; }
+
+a {
+    @apply text-gray-800;
+    @apply border-b;
+    @apply border-b-gray-400;
+}
+
+strong {
+    @apply font-bold;
+}
+
+i {
+    @apply italic;
+}
+
+body {
+    @apply text-xl;
+    @apply text-gray-800;
+    @apply leading-tight;
+}
+
+ul {
+    @apply list-disc;
+    @apply ml-5;
+}
+
+ul > li {
+    @apply mb-1;
+}
+
+code {
+    @apply text-base;
+    @apply font-semibold;
+}
+
+.container {
+    max-width: 800px;
+    @apply px-5;
+}
+
+a[target='_blank']:after {
+    content: ' ↗';
+    @apply text-xs;
+}
+
+nav {
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply justify-center;
+    @apply gap-x-5;
+    @apply gap-y-2;
+    @apply text-base;
+    @apply p-2;
+    @apply mb-5;
+    @apply flex-wrap;
+    @apply border-b;
+
+    a {
+        @apply border-0;
+    }
+}
+
+footer {
+    @apply text-center;
+    @apply p-3;
+    @apply text-base;
+    @apply border-t;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+    }
+}
