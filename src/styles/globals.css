@@ -6,7 +6,7 @@ html, body, #__next {
     @apply h-full;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, hr, img, address, section {
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr, img, address, section {
     @apply mb-5;
 }
 
@@ -44,10 +44,17 @@ body {
 
 ul {
     @apply list-disc;
+}
+
+ol {
+    @apply list-decimal;
+}
+
+ul, ol {
     @apply ml-5;
 }
 
-ul > li {
+ul > li, ol > li {
     @apply mb-1;
 }
 
