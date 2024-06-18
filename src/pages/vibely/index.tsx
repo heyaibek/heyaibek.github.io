@@ -91,24 +91,9 @@ export default function Home() {
       <section>
         <h2>Legal</h2>
         <div className="flex flex-row flex-wrap gap-4 justify-center">
-          <Link
-            href="https://telegra.ph/Vibely--Privacy-Policy-06-17"
-            target="_blank"
-            rel="noopener noreferrer">
-            Privacy Policy
-          </Link>
-          <Link
-            href="https://telegra.ph/Vibely--Terms-of-Services-06-17"
-            target="_blank"
-            rel="noopener noreferrer">
-            Terms Of Use
-          </Link>
-          <Link
-            href="https://telegra.ph/Vibely--Cookie-Policy-06-17"
-            target="_blank"
-            rel="noopener noreferrer">
-            Cookie Policy
-          </Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms Of Use</Link>
+          <Link href="/cookies">Cookie Policy</Link>
         </div>
       </section>
     </div>
