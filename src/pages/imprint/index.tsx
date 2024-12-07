@@ -8,9 +8,9 @@ export default function Home() {
       <address>
         Aibek Mazhitov
         <br />
-        Wittenberger Str. 37
+        Friedenauer Höhe 22
         <br />
-        04129 Leipzig
+        12159 Berlin
         <br />
         Deutschland
       </address>
