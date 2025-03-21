@@ -14,7 +14,7 @@ export default function Home({ posts }) {
         height="100"
       />
       <p>
-        It&apos;s Aibek - an indie hacker building <Link href="/vibely">Vibely</Link>, an iOS engineer at <Link href="https://ebay.com" target="_blank">eBay</Link>, an ex-software engineer of <Link href="https://spotify.com" target="_blank">Spotify</Link> and a music producer aka <Link href="https://open.spotify.com/playlist/25O54nArGPTdhD5j8HapHw" target="_blank">Brakata</Link>.
+        It&apos;s Aibek - an indie hacker building <Link href="https://getvibely.app" target="_blank">Vibely</Link>, an iOS engineer at <Link href="https://ebay.com" target="_blank">eBay</Link>, an ex-software engineer of <Link href="https://spotify.com" target="_blank">Spotify</Link> and a music producer aka <Link href="https://open.spotify.com/playlist/25O54nArGPTdhD5j8HapHw" target="_blank">Brakata</Link>.
       </p>
     </div>
   );
